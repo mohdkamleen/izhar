@@ -8,42 +8,44 @@
     <meta name="author" content="kamleen"> 
     <meta name="keywords" content="html, css, js">
 <style>
-*{
-	margin:10;
+*{ 
 	user-select: none;
 	}
 
 body{
-     background: linear-gradient(-45deg, white ,white ,#00b3ff ,white , #fff );
-     }
+    background: linear-gradient(-45deg, white ,white ,#00b3ff ,white , #fff );
+	min-height: 500px;
+    }
 
 fieldset{
-	background-image:linear-gradient(-45deg, white ,white , #00b3ff  50%, white , #fff );
-	width:300px;
+	background-image:linear-gradient(-45deg, white ,white , #00b3ff  50%, white , #fff ); 
 	position:absolute;
 	top:50%;
 	left:50%;
 	transform:translate(-50%, -50%);
+	padding: 10px 20px;
 }
 
 input, textarea{
 	width:60px;
 	color:#000;
-	height :50px;
-	padding :auto;
+	height :50px; 
 	width :60px;
 	border:2px solid black;
 	border-radius :50px;
 	font-size:20px;
   	background :white;
+	margin: 5px;
 }   
 
-.daniyal{ 
+.text_area{ 
 	padding :10;
 	background:linear-gradient(-42deg, white ,white ,#00b3ff ,white , #fff );
 	width :230px;
+	max-width :230px;
 	height:auto;
-	overflow:auto; 
+	min-height: 50px; 
+	overflow-x:hidden;   
 }
 
 .da{
@@ -72,6 +74,10 @@ input:focus{
        width:0;
        }
 
+#form{
+	text-align: center;
+}
+
 
 
 
@@ -80,10 +86,10 @@ input:focus{
 <body>
 <div>
 <fieldset>
-<form name=form>
-<textarea class="daniyal" placeholder="start calculations" name=answer disabled></textarea><br>
+<form name=form id="form">
+<textarea class="text_area" placeholder="start calculations" name=answer disabled></textarea><br>
 
-<input type="button" value=" 1 " accesskey=1 onclick="form.answer.value += 1 ">
+<input type="button" value=" 1 " onclick="form.answer.value += 1 ">
 <input type="button" value=" 2 " onclick="form.answer.value += 2 ">
 <input type="button" value=" 3 " onclick="form.answer.value += 3 ">
 
@@ -117,8 +123,7 @@ input:focus{
 
 <input type="button" class="da" value="clear all" onclick="form.answer.value= '' ">
 <input type="button" class="ta" value=" = " onclick="form.answer.value=eval(form.answer.value)">
-
-<br>
+ 
 
 
 
