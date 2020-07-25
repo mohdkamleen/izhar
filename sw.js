@@ -1,7 +1,7 @@
 var appVersion = 'v-1.0';
 var files = [
-    'index.html',
-    'sw.js'
+    './index.html',
+    './sw.js'
 ];
 
 self.addEventListener("install", event => {

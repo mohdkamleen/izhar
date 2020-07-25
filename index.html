@@ -4,14 +4,16 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="technical education">
-    <meta name="author" content="kamleen">
-    <meta http-equiv="refresh" content="30">
+    <meta name="description" content="calculator by html js css">
+    <meta name="author" content="kamleen"> 
     <meta name="keywords" content="html, css, js">
 <style>
-*{margin:10;}
+*{
+	margin:10;
+	user-select: none;
+	}
+
 body{
-     
      background: linear-gradient(-45deg, white ,white ,#00b3ff ,white , #fff );
      }
 
@@ -34,44 +36,42 @@ input, textarea{
 	border-radius :50px;
 	font-size:20px;
   	background :white;
-
-	
-
 }   
-.daniyal{
-	
+
+.daniyal{ 
 	padding :10;
 	background:linear-gradient(-42deg, white ,white ,#00b3ff ,white , #fff );
 	width :230px;
 	height:auto;
-	overflow:auto;
-	
+	overflow:auto; 
 }
+
 .da{
 	width :100px;
 	color:000;
 	background-color :none;
 }
+
 .da:hover{
-	color:#000;
-	background :linear-gradient(-45deg,red,white,green);
+	color:#000; 
 }
+
 input:focus{
 	border:2px solid black;
 	border-radius:50px;
 	color:blue;
 	background :linear-gradient(-45deg, white ,white ,#00b3ff ,white , #fff );
-	
 }
+
 .ta{
 	width :105px;
-	
 }
 
 
 ::-webkit-scrollbar{
        width:0;
        }
+
 
 
 
@@ -83,7 +83,7 @@ input:focus{
 <form name=form>
 <textarea class="daniyal" placeholder="start calculations" name=answer disabled></textarea><br>
 
-<input type="button" value=" 1 " onclick="form.answer.value += 1 ">
+<input type="button" value=" 1 " accesskey=1 onclick="form.answer.value += 1 ">
 <input type="button" value=" 2 " onclick="form.answer.value += 2 ">
 <input type="button" value=" 3 " onclick="form.answer.value += 3 ">
 
