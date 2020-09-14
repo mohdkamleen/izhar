@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,70 +9,48 @@
     <meta name="msapplication-config" content="browserconfig.xml">
     <meta name="theme-color" content="#888">
     <meta property="og:type" content="website">
-    <meta property="og:site_name" content="Damian Watracz">
-    <meta property="og:image" content="https://mohdkamleen.github.io/coders.github.io/css/kamleen.jpg">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:title" content="Portfolio title | Damian Watracz - Freelance Web & UI Designer">
-    <meta property="og:description" content="I design unique and functional">
-    <title>Mohd Kamleen</title>
+    <meta property="og:site_name" content="Izhar"> 
+    <title>Izhar Ahsan</title>
     <link rel="stylesheet" href="https://mohdkamleen.github.io/link/bootstrap4.css"> 
-    <link rel="stylesheet" href="https://mohdkamleen.github.io/link/animate.css"> 
-    <link rel="stylesheet" href="https://mohdkamleen.github.io/link/icon.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-
-        body{
-            transition: all .3s ease-in-out; 
-            color: #555555;
-            z-index: -2;
+        * {
+            margin: 0;
+            padding: 0; 
+            list-style: none;
+            text-decoration: none;
+            outline: none;
         }
 
-         section{
-            font-size: 20px; 
-            word-wrap: break-word;
-         }
+        body {
+            height: 100%;
+            width: 100vw;
+            overflow-x: hidden;
+        }
 
+        ::selection {
+            color: #222222;
+            text-shadow: 1px 1px 1px gray,
+                1px 1px 2px gray,
+                1px 1px 3px gray;
 
-         ::selection {
-            color:#222222;
-            text-shadow:1px 1px 1px gray,
-                        1px 1px 2px gray,
-                        1px 1px 3px gray;
-            
-            }
-
-        #pop{
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%); 
-            height: 250px;  
-            width:400px ;
-            background: radial-gradient(#ebebeb, #888888);  
-            display: none;
-            border: 1px solid #555555;
-            border-radius: 29% 92% 36% 38% /99% 36% 96% 98%   ; 
-            z-index: 1111;
-            animation: fadeOutTopLeft .5s;
-            
         }
 
         .svg {
-            position: relative;
+            position: absolute;
             top: 0;
-            left: 0;
-            margin-top: 50px;
+            left: 0; 
             width: 100%;
-            height: 80vh;
-            background: linear-gradient(#ffffff 40%, #888888 );
-
+            height: 90vh;
+            background: linear-gradient(#ffffff 40%, #888888);
+            /* background: url(https://source.unsplash.com/500x600/?html,css) no-repeat;
+            background-size: cover; */
         }
 
         svg {
             position: absolute;
             bottom: 0;
-            left: 0; 
+            left: 0;
         }
 
         .search_icon {
@@ -80,173 +59,198 @@
             left: 15px;
             border: 1px solid #555555;
             border-left: none;
-            border-radius: 50% 67% 17% 41% / 46% 56% 73% 18% ;
-            padding: 10px; 
+            border-radius: 50% 67% 17% 41% / 46% 56% 73% 18%;
+            padding: 10px;
             z-index: 1;
             color: #555555;
-        }
+            background: linear-gradient(-45deg, #d3d2d2, transparent 60%);
+        } 
 
         .navbar_icon {
             position: absolute;
             top: 15px;
             right: 15px;
+            z-index: 1;
             border: 1px solid #555555;
             border-left: none;
-            border-radius: 41% 17% 67% 50% / 18% 73% 56% 46%  ;
-            padding: 10px;
-            z-index: 1;
+            border-radius: 41% 17% 67% 50% / 18% 73% 56% 46%;
+            padding: 10px; 
             color: #555555;
             transform: rotate(180deg);
+            background: linear-gradient(-135deg, #d3d2d2, transparent 60%);
         }
 
-       
+        .navbar_icon:hover, .search_icon:hover {
+            background: transparent;
+        }
 
-       .search_input_feild {
-           display: block;
-           margin: auto;
-           outline: none;
-           width: calc(100% - 60px); 
-           font-size: 22px;
-           border: 1px solid #555555;
-           background: transparent; 
-           padding: 10px;
-           text-indent: 20px;
-           color: #555555;
-           border-radius: 29% 36% 96% 68% / 69% 32% 50% 38%    ; 
-       }
+        /* div ul.menu,  div.searchbar{
+            display: none;
+        } */
+
+        @media (max-width: 700px){
+            div ul.menu{
+                position: fixed;
+                top: 0;
+                left: 0; 
+                height: 100vh;
+                overflow: hidden;
+                width: 100vw;
+                z-index: 2; 
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                font-size: 2rem;
+                text-align: center;  
+                transition: all .3s linear; 
+                transform-origin: top right;
+                transform: scale(0); 
+                clip-path: polygon(75% 0, 100% 24%, 100% 100%, 0 100%, 0 0);
+            } 
+
+            div ul.menu li a{
+                color: #555555;
+                font-weight: bold; 
+            } 
+
+            div ul.menu li a:hover{
+                text-decoration: none;
+            }
+
+            div ul.menu li { 
+                transform: scale(0);
+            } 
+
+            div ul.menu li:nth-child(1){
+               transition: all .3s .3s linear; 
+            }
+
+            div ul.menu li:nth-child(2){ 
+               transition: all .3s .4s linear; 
+            }
+
+            div ul.menu li:nth-child(3){ 
+               transition: all .3s .5s linear; 
+            }
+
+            div ul.menu.active{
+                background: linear-gradient(rgba(255, 251, 251, 0.9), rgba(158, 157, 157, 0.9)); 
+                display: flex;
+                transform: scale(1);
+            }
+
+            div ul.menu.active li{ 
+                transform: scale(1);
+            } 
+
+            div.searchbar{
+                position: fixed; 
+                text-align: center;
+                height: 100vh;
+                display: grid;
+                place-items: center;
+                width: 100vw; 
+                background: linear-gradient(rgba(255, 251, 251, 0.9), rgba(158, 157, 157, 0.9)); 
+                transform: scale(0);
+                transition: all .3s linear; 
+                opacity: 0;
+                transform-origin: top left;
+                clip-path: polygon(26% 0, 100% 0, 100% 100%, 0 100%, 0 23%);
+                z-index: 2;
+                overflow: hidden;
+            } 
+
+            div.searchbar.active{
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            #search_input{
+                width: 130%; 
+                font-size: 1.3rem; 
+                padding: 5px 10px;
+                background: transparent;
+                border: 1px solid #555555; 
+                transition: all .3s .3s linear;
+                border-radius: 5px;
+                text-indent: 10px;
+                transform: scale(0);
+            }
+
+            #search_button{ 
+                transition: all .3s .4s linear;
+                transform: scale(0);
+                border: 1px solid #555555; 
+                border-radius: 5px;
+                padding:2px 10px;
+                background: transparent;
+            }
+
+            div.searchbar.active #search_input, div.searchbar.active #search_button{
+                transform: scale(1);
+            }
+
+            #search_input:focus{
+                box-shadow: 1px 1px 5px 1px rgb(152, 152, 167),
+                            1px -1px 7px 2px rgb(100, 100, 102);
+                border-radius: 5px; 
+            }
  
-      .btn-group{
-          display: block;
-          margin: 40px; 
-          text-align: right;
-      }
-
-      .search_button, .cancel_button{
-            background: radial-gradient(#c0c0c0, #888888);  
-            border: 1px solid #555555;
-            transition: .2s all linear;
-      }
-
-      .search_button:hover, .cancel_button:hover{
-            background: radial-gradient(#e4e4e4 ,#888888 );   
-      }
+        }
     </style>
 </head>
-<body >
-    <section id="demo">
-        <a class="search_icon" href="#" onclick="body_rotate()" > <i class="fa fa-search"></i> </a>
-        
-        <a class="navbar_icon" href="#" onclick="body_rotate()" > <i class="fa fa-bars"></i> </a> 
-         
-    <div class="svg" > 
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 250"><path fill="#fff" fill-opacity="1" d="M0,96L48,122.7C96,149,192,203,288,197.3C384,192,480,128,576,133.3C672,139,768,213,864,218.7C960,224,1056,160,1152,138.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-     <h1 class="text-center  animate__animated animate__bounce">mohd kamleen</h1>
-     <h1 class="text-center animate__animated animate__bounce">web developer</h1>
-     <h1 class="text-center animate__animated animate__bounce">python programmer</h1>
-     <h1 class="text-center animate__animated animate__bounce">good weaver</h1>
-     <h1 class="text-center  animate__animated animate__bounce">web developer</h1>
-     <h1 class="text-center  animate__animated animate__bounce">python programmer</h1>
-     <h1 class="text-center animate__animated animate__bounce">good weaver</h1>
-    </div>
-     
-     
-  <p> 
-            A content delivery network (CDN) refers to a 
-            geographically distributed group of servers which work 
-            together to provide fast delivery of Internet content.
-            A CDN allows for the quick transfer of assets needed for 
-            loading Internet content including HTML pages, 
-            javascript files, stylesheets, images, and videos. <br> <br>
 
-            While a CDN does not host content and can’t replace 
-            the need for proper web hosting, it does help cache 
-            content at the network edge, which improves website 
-            performance. Many websites struggle to have their 
-            performance needs met by traditional 
-            hosting services, which is why they opt for CDNs.
-
-        </p>
-         
-  
-
-          <p>
-            <b class="text-secondary"> How does a CDN work? </b> <br>
-            At its core, a CDN is a network of servers linked together with the goal 
-            of delivering content as quickly, cheaply, reliably, and securely as possible. 
-            In order to improve speed and connectivity, a CDN will place servers at the 
-            exchange points between different networks. <br>
-            
-            These Internet exchange points (IXPs) are the primary locations where 
-            different Internet providers connect in order to provide each other 
-            access to traffic originating on their different networks. By having a connection to these 
-            high speed and highly interconnected locations, a CDN provider is able 
-            to reduce costs and transit times in high speed data delivery.
-          </p>
-
-  </section>
- 
-
-     <script src="clipboard.js"></script>
-     <script src="sweetalert.js"></script>
-     <!-- <script src="sweetalert2.js"></script> -->
-     <!-- <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script> -->
-     <script>
-         
-         function body_rotate(){  
-             
-            //      document.body.setAttribute( 'style', '-webkit-transform: rotatez(5deg);');
-            if(document.getElementById('pop').style.display == 'block'){
-                 document.getElementById('demo').style.opacity = '1';
-                document.getElementById('pop').style.display = 'none';
-
-            } else {
-                 document.getElementById('pop').style.display = 'block';
-                 document.getElementById('demo').style.opacity = '.3'; 
-            }
-            //      document.getElementById('demo').style.transform = 'skewX(160deg)' ;  
-            //      document.getElementById('demo').style.borderLeft = '2px solid gray';  
+<body>
+    
+        <div class="search_icon fa fa-search"></div> 
+            <div class="searchbar">
+                <form action="#">
+                    <input type="search"  name="search" autocomplete="off" placeholder="Type a search message" id="search_input"> <br> <br>
+                    <input type="submit" value="search" id="search_button">
+                </form>
+            </div> 
 
 
-// very inmportant for me 
-            // swal({
-            //     title: 'Search any message',
-            //     content: "input",
-            //     buttons: {
-            //             cancel: "cancel",
-            //             catch: {
-            //             text: "search!",
-            //             value: "catch",
-            //             closeModal: false,
-            //             }
-            //         },
-            //     })
-            //     .then(res => {
-            //         if(res == "kamleen"){
-            //             document.getElementById('demo').style.transform = 'skewX(160deg)' ;  
-            //             swal("wow", "The AJAX request failed!", "success");
-            //         } else {
-            //             swal("Oh noes!", "The AJAX request failed!", "error");
-            //         }
-            //     })
- 
-             }
+        <div class="navbar_icon fa fa-bars "> </div>
+        <div class="navbar">
+            <ul  class="menu ">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="svg">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 250">
+                <path fill="#fff" fill-opacity="1"
+                    d="M0,96L48,122.7C96,149,192,203,288,197.3C384,192,480,128,576,133.3C672,139,768,213,864,218.7C960,224,1056,160,1152,138.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
+            <h1 class="text-center  animate__animated animate__bounce">IZHAR</h1> 
+        </div>
 
-     </script> 
+        <script>
+            let menu_toggel = document.querySelector(".navbar_icon");
+            let menu =  document.querySelector(".menu");
+            menu_toggel.addEventListener("click", () => {
+             menu.classList.toggle("active");
+            })
 
-
+            let search_toggel = document.querySelector(".search_icon");
+            let search =  document.querySelector(".searchbar");
+            search_toggel.addEventListener("click", () => {
+                search.classList.toggle("active");
+            })
+        </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+            integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+            integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+            crossorigin="anonymous"></script>
 </body>
-<div id="pop" >
-    <h1 class="text-center p-3 " style="color: #555555;"> search! message </h1>
-    <input type="text" placeholder="Type a search message" class="search_input_feild">
-    <div class="btn-group">
-        <input type="button" value="cancel"  class=" btn search_button">
-        <input type="button" value="search"  class=" btn cancel_button">
-
-    </div>
-</div>
 
 </html>
- 
-
-
- 
