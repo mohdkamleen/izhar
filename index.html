@@ -42,7 +42,7 @@
             left: 0; 
             width: 100%;
             height: 90vh;
-            background: linear-gradient(#ffffff 40%, #888888);
+            background: linear-gradient(#ffffff 30%, #888888);
             /* background: url(https://source.unsplash.com/500x600/?html,css) no-repeat;
             background-size: cover; */
         }
@@ -97,23 +97,71 @@
             transform: rotate(90deg);
             margin: 60px 5px;
             font-size: 20px;
-        }
-
+        } 
         div ul.menu li a{
             color: #555555;
             text-transform: uppercase;
         }
         div ul.menu li a:hover{
             text-decoration: none;
-            text-shadow: 0px 0px 30px #000000;
-            text-decoration: line-through;
+            text-shadow: 0px 0px 30px #000000; 
+        } 
+
+
+
+
+        .header_text{
+            position: absolute;
+            height: 100;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: transparent;
+            -webkit-text-stroke: 1px #555555;
         }
 
+        .header_text .type_text{
+            color: #999999;
+        }
+
+        .header_text h1 .animation__header_text{
+            animation: animation__header_text linear 2s infinite alternate;
+        }
+
+        @keyframes animation__header_text {
+            0%{
+                -webkit-text-stroke: 1px #151388;
+            }
+            20%{
+                -webkit-text-stroke: 1px #550968;
+            }
+            40%{
+                -webkit-text-stroke: 1px rgb(156, 3, 3);
+            }
+            60%{
+                -webkit-text-stroke: 1px #969b57;
+            }
+            80%{
+                -webkit-text-stroke: 1px #50007e;
+            }
+            100%{
+                -webkit-text-stroke: 1px #006312;
+            }
+        }
+         
 
 
-
-
-
+        /* .header_circle{
+            position: absolute;
+            height: 150px;
+            width: 200px; 
+            background: linear-gradient(45deg,transparent 30%, gray 90%);
+            top: 150px;
+            opacity: .1;
+            left: 100px;
+            z-index: 1;
+            border-radius: 84% 50% 76% 59% / 32% 43% 80% 85% ;
+        } */
 
 
 
@@ -167,6 +215,7 @@
 
             div ul.menu li a:hover::before {  
                 display: block;
+                letter-spacing: 20px;
             }
 
             div ul.menu li a:hover{
@@ -177,7 +226,7 @@
             div ul.menu li { 
                 transform: scale(0);
                 margin: 5px 50px;
-                font-size: 22px;
+                font-size: 1.5rem;
             } 
 
             div ul.menu li:nth-child(1){
@@ -264,8 +313,7 @@
         <div class="search_icon fa fa-search"></div> 
             <div class="searchbar">
                 <form action="#">
-                    <input type="search"  name="search" autocomplete="off" placeholder="search here" id="search_input"> <br> <br>
-                    <input type="submit" value="search" id="search_button">
+                    <input type="search"  name="search" autocomplete="off" placeholder="search here" id="search_input"> <br> 
                 </form>
             </div> 
 
@@ -278,13 +326,20 @@
                 <li><a href="#" data-text="contact">&nbsp; Contact &nbsp; </a></li>
             </ul>
         </div>
+
+        <div class="header_circle"></div>
         <div class="svg">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 250">
                 <path fill="#fff" fill-opacity="1"
                     d="M0,96L48,122.7C96,149,192,203,288,197.3C384,192,480,128,576,133.3C672,139,768,213,864,218.7C960,224,1056,160,1152,138.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
                 </path>
             </svg>
-            <h1 class="text-center text-secondary mt-2">logo</h1> 
+            <h1 class="text-center text-secondary mt-2">logo</h1> <br><br><br><br><br> 
+
+            <div class="header_text">
+                <h1>Welcom to my <span class="animation__header_text">Website</span>.</h1>
+                <h1>I'm a <span class="type_text"></span> </h1> 
+            </div>
         </div>
 
         <script>
@@ -292,13 +347,14 @@
             let menu =  document.querySelector(".menu");
             menu_toggel.addEventListener("click", () => {
              menu.classList.toggle("active");
-            })
+            }) 
 
             let search_toggel = document.querySelector(".search_icon");
             let search =  document.querySelector(".searchbar");
             search_toggel.addEventListener("click", () => {
                 search.classList.toggle("active");
-            })
+            }) 
+
         </script>
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
             integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
@@ -309,6 +365,19 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
             integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
             crossorigin="anonymous"></script>
+        <script src="https://raw.githubusercontent.com/mattboldt/typed.js/master/src/typed.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script> 
+        <script>
+        var typed = new Typed('.type_text', {
+                strings: ["", "good student", "web developer", "web designer", "programmer" ],
+                loop: true,
+                backSpeed: 30,
+                typeDelay: 1000,
+                cursorChar: '_',
+                typeSpeed: 100
+
+                });
+        </script>
 </body>
 
 </html>
