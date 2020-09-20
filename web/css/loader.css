@@ -1,4 +1,4 @@
-div.preloader{
+div.preloader {
     position: fixed;
     top: 0;
     left: 0;
@@ -6,95 +6,151 @@ div.preloader{
     width: 100vw;
     z-index: 999;
     overflow: hidden;
-    background: radial-gradient(rgb(255, 255, 255),rgb(143, 143, 143));
+    background: radial-gradient(white, #8f8f8f);
+    -webkit-transition: all .5s 1s linear;
     transition: all .5s 1s linear;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
-    border-bottom: 2px solid var(--text-color) ;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    border-bottom: 2px solid var(--text-color);
     cursor: wait;
-} 
-
-.preloader::-webkit-scrollbar{
+    clip-path: polygon(50% 0%, 83% 0, 100% 0, 100% 87%, 74% 100%, 25% 100%, 0 85%, 0% 43%, 0 0);
+  }
+  
+  .preloader::-webkit-scrollbar {
     width: 0px;
     height: 0px;
-}
-
-div.preloader span{
+  }
+  
+  div.preloader span {
     font-size: 25px;
     border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 80px;  
-    width: 80px; 
-    font-family: 'Short Stack', cursive; 
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    height: 80px;
+    width: 80px;
+    font-family: var(--font-family);
+    -webkit-transition: all .5s .5s linear;
     transition: all .5s .5s linear;
     color: var(--text-color);
-    animation: preloader_animate 2s ease infinite;
+    -webkit-animation: preloader_animate 2s ease infinite;
+            animation: preloader_animate 2s ease infinite;
     overflow: hidden;
-}
-
-@keyframes preloader_animate{  
-    33%{
-        box-shadow: 0px 0px 0px 30px #9b9b9b ;
+  }
+  
+  @-webkit-keyframes preloader_animate {
+    33% {
+      -webkit-box-shadow: 0px 0px 0px 30px #9b9b9b;
+              box-shadow: 0px 0px 0px 30px #9b9b9b;
     }
-    66%{
-        box-shadow: 0px 0px 0px 30px #999999,
-                    0px 0px 0px 60px #acacac ;
+    66% {
+      -webkit-box-shadow: 0px 0px 0px 30px #999999,
+   0px 0px 0px 60px #acacac;
+              box-shadow: 0px 0px 0px 30px #999999,
+   0px 0px 0px 60px #acacac;
     }
-    100%{ 
-        box-shadow: 0px 0px 0px 30px #999999,
-                    0px 0px 0px 60px #acacac,
-                    0px 0px 0px 90px #cecece ; 
+    100% {
+      -webkit-box-shadow: 0px 0px 0px 30px #999999,
+   0px 0px 0px 60px #acacac,
+   0px 0px 0px 90px #cecece;
+              box-shadow: 0px 0px 0px 30px #999999,
+   0px 0px 0px 60px #acacac,
+   0px 0px 0px 90px #cecece;
     }
-}
-
-div.preloader p{
-    font-family: 'Short Stack', cursive;
+  }
+  
+  @keyframes preloader_animate {
+    33% {
+      -webkit-box-shadow: 0px 0px 0px 30px #9b9b9b;
+              box-shadow: 0px 0px 0px 30px #9b9b9b;
+    }
+    66% {
+      -webkit-box-shadow: 0px 0px 0px 30px #999999,
+   0px 0px 0px 60px #acacac;
+              box-shadow: 0px 0px 0px 30px #999999,
+   0px 0px 0px 60px #acacac;
+    }
+    100% {
+      -webkit-box-shadow: 0px 0px 0px 30px #999999,
+   0px 0px 0px 60px #acacac,
+   0px 0px 0px 90px #cecece;
+              box-shadow: 0px 0px 0px 30px #999999,
+   0px 0px 0px 60px #acacac,
+   0px 0px 0px 90px #cecece;
+    }
+  }
+  
+  div.preloader p {
+    font-family: var(--font-family);
     font-size: 35px;
     font-weight: bold;
     -webkit-text-stroke: 2px var(--text-color);
     color: #999999;
-}
-
-div.preloader p b{
-    animation: preloader_dot_animate 1s linear infinite;  
-}
-div.preloader p b:nth-child(1){
-    animation-delay: .1s;
-}
-div.preloader p b:nth-child(2){
-    animation-delay: .3s;
-}
-div.preloader p b:nth-child(3){
-    animation-delay: .5s;
-}
-@keyframes preloader_dot_animate {
-    0%{
-        opacity: 0;
+  }
+  
+  div.preloader p b {
+    -webkit-animation: preloader_dot_animate 1s linear infinite;
+            animation: preloader_dot_animate 1s linear infinite;
+  }
+  
+  div.preloader p b:nth-child(1) {
+    -webkit-animation-delay: .1s;
+            animation-delay: .1s;
+  }
+  
+  div.preloader p b:nth-child(2) {
+    -webkit-animation-delay: .3s;
+            animation-delay: .3s;
+  }
+  
+  div.preloader p b:nth-child(3) {
+    -webkit-animation-delay: .5s;
+            animation-delay: .5s;
+  }
+  
+  @-webkit-keyframes preloader_dot_animate {
+    0% {
+      opacity: 0;
     }
-    100%{
-        opacity: 1;
+    100% {
+      opacity: 1;
     }
-}
-
-div.preloader.active{
-    top: -100%; 
-}
-
-div.preloader.active span{
-    transform: scale(0);
-}
-
-
-
-
-
-
-
-h1
-{
+  }
+  
+  @keyframes preloader_dot_animate {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  div.preloader.active {
+    top: -150%;
+  }
+  
+  div.preloader.active span {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  
+  h1 {
     height: 200vh;
-}
+  } 
