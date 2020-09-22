@@ -75,19 +75,13 @@
     font-size: 17px;
     color: #646464;
     border-color: #6e6e6e;
+    transition: .2s ease;
 }
 
 .header_text .btn-group .btn:hover{
-    background: var(--radial-gradient); 
+    box-shadow: var(--box-shadow);
 }
-
-.header_text .btn-group .btn:nth-child(2){
-    background: var(--radial-gradient); 
-}
-
-.header_text .btn-group .btn:nth-child(2):hover{
-    background: transparent;  
-} 
+ 
  
 img.nav_background_img {  
     margin-right: 10rem;

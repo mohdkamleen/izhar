@@ -13,6 +13,7 @@
     --text-color: #555555;
     --radial-gradient: radial-gradient(rgba(255, 255, 255, 0.4),rgba(143, 143, 143, 0.8));
     --font-family: 'Short Stack'; 
+    --box-shadow: 1px 1px 5px 1px rgba(65, 65, 65, 0.466); 
   }
   
   body {
