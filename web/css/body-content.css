@@ -114,8 +114,7 @@ img.nav_background_img {
         padding: 2rem;
     }
 
-    .header_text .text{ 
-        min-width: 300px;
+    .header_text .text{  
         width: 100%;
     }
 
@@ -152,12 +151,12 @@ img.nav_background_img {
 
     .header_text .text{ 
         min-width: 380px; 
-        margin-left: 40%;
+        margin-left: 20%;
         margin-top: -50%;
     }
 
     .header_text .btn-group{ 
-        margin-left: 40%;
+        margin-left: 20%;
     }
 
     .header_text .text span{  
