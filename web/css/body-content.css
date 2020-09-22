@@ -115,16 +115,16 @@ img.nav_background_img {
     }
 
     .header_text .text{ 
-        /* min-width: 300px; */
+        min-width: 300px;
         width: 100%;
     }
 
     .header_text .text span{  
-        font-size: 1.6rem;  
+        font-size: 1.5rem;  
     }
     
     .header_text .text h2 { 
-        font-size: 2.1rem;
+        font-size: 2rem;
     }
     .header_text .btn-group{
         display: flex;
