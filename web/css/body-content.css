@@ -117,6 +117,7 @@ img.nav_background_img {
 
     .header_text .text{  
         width: 90%; 
+        overflow-x: hidden;
     }
 
     .header_text .text span{  
