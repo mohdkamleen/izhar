@@ -110,7 +110,7 @@ img.nav_background_img {
     }
 
     .header_text {  
-        padding: 1rem;
+        /* padding: 1rem; */
         width: 90%;
         overflow-x: hidden;
     }
