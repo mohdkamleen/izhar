@@ -91,7 +91,7 @@
  
 img.nav_background_img {  
     margin-right: 10rem;
-    height: 40vh; 
+    height: 350px; 
 } 
 
 @media (max-width: 700px){ 
