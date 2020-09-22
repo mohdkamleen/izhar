@@ -16,7 +16,14 @@
     font-family: var(--font-family);
     float: left;
     margin: 15px;
+    -webkit-text-stroke: 1px rgba(70, 75, 121, 0.644) ;
     font-size: 20px;
+  }
+
+  nav .navigation .logo span{
+    color: transparent;
+    -webkit-text-stroke: 1px rgba(108, 112, 144, 0.514) ;
+    mix-blend-mode: difference;
   }
   
   nav .navbar {
