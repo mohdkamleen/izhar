@@ -48,26 +48,13 @@
     width: 500px; 
 }
 
-.header_text .text p{
+.header_text .text span{
     position: relative;
     text-transform: capitalize;
     font-size: 2rem; 
     color: var(--text-color);
 }
-
-.header_text .text p::after {
-    position: absolute;
-    content: ""; 
-    bottom: 10px;
-    margin: 8px;
-    transform-origin: right bottom;  
-    width: 250px; 
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    box-shadow: 0px 0px 2px 1px rgb(77, 75, 75);
-    border: 2px solid #909090;
-}
-
+ 
 .header_text .text h2 {
     color: var(--text-color); 
     font-size: 2.5rem;
