@@ -45,8 +45,7 @@
 
 .header_text .text{
     line-height: 60px;
-    min-width: 500px; 
-    border: 1px double;
+    min-width: 500px;  
     padding: 10px;
 }
 
@@ -63,7 +62,7 @@
 }
 
 .header_text .text h2 span{
-    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.514) ;
+    -webkit-text-stroke: 1px rgba(70, 75, 121, 0.644) ;
 }
 
 .header_text .btn-group .btn{
@@ -114,6 +113,19 @@ img.nav_background_img {
     img.nav_background_img {
         display: none; 
     }
+
+    .header_text { 
+        width: 100%;   
+        padding: 50px;
+    }
+
+    .header_text .text span{  
+        font-size: 1.8rem;  
+    }
+    
+    .header_text .text h2 { 
+        font-size: 2.2rem;
+    }
 } 
 
 @media (max-width: 1000px) and (min-width:700px) {
@@ -124,9 +136,22 @@ img.nav_background_img {
     }
 
     img.nav_background_img {  
-        margin-right: -2em;
-        height: 250px; 
+        margin-right: 2em;
+        height: 200px; 
     }
+ 
+    .header_text .text{ 
+        min-width: 400px;   
+    }
+
+    .header_text .text span{  
+        font-size: 1.8rem;  
+    }
+    
+    .header_text .text h2 { 
+        font-size: 2.2rem;
+    }
+
   }
 
 @media (max-width: 1300px) and (min-width:1000px) {
@@ -138,7 +163,7 @@ img.nav_background_img {
 
     img.nav_background_img {  
         margin-right: 5rem;
-        height: 300px; 
+        height: 250px; 
     }
  }
  
