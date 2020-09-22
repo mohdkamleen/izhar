@@ -4,11 +4,31 @@
     position: absolute;
     top: 0;
     right: 0;
-    height: 90vh;
-    width: 90vw;
+    height: 90%;
+    width: 90%;
     z-index: -1;
     clip-path: circle(90vh at 80% -2vh);
     background: linear-gradient(to bottom, transparent, #888888); 
+}
+ 
+.nav_hamburger_background{
+    content: "";
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    height: 90px;
+    width: 110px;
+    background: var(--radial-gradient);
+    z-index: -1;
+    display: none;
+    transform: scale(0);
+    transform-origin: right top;
+    transition: transform .5s ease;
+    border-radius: 62% 10% 49% 100% / 68% 47% 44% 90% ; 
+}
+
+.nav_hamburger_background.show{
+  transform: scale(1);
 }
 
 .body_content_header .header_top {
@@ -23,7 +43,33 @@
 
 }
 
+.header_text .text{
+    line-height: 50px;
+}
 
+.header_text .text span{
+    position: relative;
+    text-transform: capitalize;
+    font-size: 2rem; 
+    color: var(--text-color);
+}
+
+.header_text .text span::after {
+    position: absolute;
+    content: ""; 
+    bottom: 2px;
+    margin: 8px;
+    transform-origin: right bottom;  
+    width: 250px; 
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border: 2px solid #909090;
+}
+
+.header_text .text h2 {
+    color: var(--text-color); 
+    font-size: 2.5rem;
+}
 
 
 
@@ -36,13 +82,17 @@
 
 img.nav_background_img {  
     margin-right: 10rem;
-    height: 40vh;
-    z-index: -1;
+    height: 40vh; 
 } 
 
 @media (max-width: 700px){ 
+
+    .nav_hamburger_background{
+        display: block;
+    }
+
     .nav_background{ 
-    width: 99vw;
+    width: 99%;
     clip-path: circle(70vh at 90% -25vh);   
     } 
     img.nav_background_img {
@@ -53,13 +103,13 @@ img.nav_background_img {
 @media (max-width: 1000px) and (min-width:700px) {
 
     .nav_background{   
-    width: 85vw;
+    width: 85%;
     clip-path: circle(90vh at 135% -10%); 
     }
 
     img.nav_background_img {  
         margin-right: -2em;
-        height: 30vh; 
+        height: 250px; 
     }
   }
 
@@ -71,8 +121,8 @@ img.nav_background_img {
     }
 
     img.nav_background_img {  
-        margin-right: 10rem;
-        height: 40vh; 
+        margin-right: 5rem;
+        height: 300px; 
     }
  }
  

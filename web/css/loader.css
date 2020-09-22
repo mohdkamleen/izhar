@@ -2,13 +2,13 @@ div.preloader {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100vh;
-    width: 100vw;
+    height: 98%;
+    width: 100%;
     z-index: 999;
     overflow: hidden;
     background: radial-gradient(white, #8f8f8f);
-    -webkit-transition: all .8s 1s linear;
-    transition: all .8s 1s linear;
+    -webkit-transition: all .8s 2s linear;
+    transition: all .8s 2s linear;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -22,8 +22,11 @@ div.preloader {
         -ms-flex-direction: column;
             flex-direction: column;
     border-bottom: 2px solid var(--text-color);
-    cursor: wait;
-    clip-path: circle(100vh at 50% -5vh);
+    cursor: wait; 
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    
+    
   }
   
   .preloader::-webkit-scrollbar {
@@ -46,8 +49,8 @@ div.preloader {
     height: 80px;
     width: 80px;
     font-family: var(--font-family);
-    -webkit-transition: all .5s .5s linear;
-    transition: all .5s .5s linear;
+    -webkit-transition: all .5s 1.5s linear;
+    transition: all .5s 1.5s linear;
     color: var(--text-color);
     -webkit-animation: preloader_animate 2s ease infinite;
             animation: preloader_animate 2s ease infinite;
@@ -151,7 +154,12 @@ div.preloader {
             transform: scale(0);
   }
 
-
+@media (max-width: 700px){
+  div.preloader { 
+    border-bottom-left-radius: 1000px;
+    border-bottom-right-radius: 1000px;
+  }
+}
 
   
   h1 {
