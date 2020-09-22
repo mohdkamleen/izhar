@@ -109,9 +109,8 @@ img.nav_background_img {
         display: none; 
     }
 
-    .header_text { 
-        /* width: 100%;    */
-        padding: 2rem;
+    .header_text {  
+        /* padding: 1rem;  */
     }
 
     .header_text .text{  
