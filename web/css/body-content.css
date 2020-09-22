@@ -115,7 +115,8 @@ img.nav_background_img {
     }
 
     .header_text .text{ 
-        min-width: 350px;    
+        /* min-width: 300px; */
+        width: 100%;
     }
 
     .header_text .text span{  
