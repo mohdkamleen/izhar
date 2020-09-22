@@ -87,14 +87,8 @@
 
 .header_text .btn-group .btn:nth-child(2):hover{
     background: transparent;  
-}
-
-
-
-
-
-
-
+} 
+ 
 img.nav_background_img {  
     margin-right: 10rem;
     height: 40vh; 
@@ -104,27 +98,42 @@ img.nav_background_img {
 
     .nav_hamburger_background{
         display: block;
-    }
+    } 
 
     .nav_background{ 
     width: 99%;
     clip-path: circle(70vh at 90% -25vh);   
     } 
+
     img.nav_background_img {
         display: none; 
     }
 
     .header_text { 
         width: 100%;   
-        padding: 50px;
+        padding: 2rem;
+    }
+
+    .header_text .text{ 
+        min-width: 350px;    
     }
 
     .header_text .text span{  
-        font-size: 1.8rem;  
+        font-size: 1.6rem;  
     }
     
     .header_text .text h2 { 
-        font-size: 2.2rem;
+        font-size: 2.1rem;
+    }
+    .header_text .btn-group{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+    .header_text .btn-group .btn{
+        width: calc(100% - 20px); 
+        min-width: 200px;
     }
 } 
 
@@ -135,13 +144,19 @@ img.nav_background_img {
     clip-path: circle(90vh at 135% -10%); 
     }
 
-    img.nav_background_img {  
-        margin-right: 2em;
+    img.nav_background_img {   
+        margin-top: 70%;
         height: 200px; 
-    }
- 
+    } 
+
     .header_text .text{ 
-        min-width: 400px;   
+        min-width: 380px; 
+        margin-left: 40%;
+        margin-top: -50%;
+    }
+
+    .header_text .btn-group{ 
+        margin-left: 40%;
     }
 
     .header_text .text span{  
