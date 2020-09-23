@@ -53,9 +53,10 @@ img.nav_background_img {
     width: 100%; 
     margin: 5%;
     max-width: 500px;
-    min-width: 400px;
-    /* border: 2px solid;  */
-    padding: 1rem;
+    min-width: 400px; 
+    border-radius: 29% 27% 26% 31% / 26% 6% 24% 8%  ;
+    padding: 3rem 0rem;
+    background: radial-gradient(transparent 70%,rgba(206, 206, 206, 0.568));
 } 
 
 .contact-form form{
