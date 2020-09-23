@@ -16,7 +16,7 @@
     font-family: var(--font-family);
     float: left;
     margin: 15px;
-    -webkit-text-stroke: 1px rgba(70, 75, 121, 0.644) ;
+    -webkit-text-stroke: 1px rgba(15, 28, 149, 0.644) ;
     font-size: 20px;
   }
 
@@ -34,7 +34,7 @@
   nav .navbar ul li {
     display: inline-block;
     list-style: none;
-    margin: 15px;
+    margin: 15px; 
   }
   
   nav .navbar ul li a {
@@ -48,11 +48,12 @@
     padding: 9px;
     border-radius: 41% 17% 67% 50% / 18% 73% 56% 46%;
     -webkit-transition: all .1s linear;
-    transition: all .1s linear;
+    transition: all .1s linear; 
   }
   
   nav .navbar ul li a:hover { 
     box-shadow: var(--box-shadow);
+    border: 2px solid #273166;
   }
   
   nav .hamburger {

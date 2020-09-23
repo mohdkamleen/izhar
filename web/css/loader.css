@@ -24,9 +24,7 @@ div.preloader {
     border-bottom: 2px solid var(--text-color);
     cursor: wait; 
     border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    
-    
+    border-bottom-right-radius: 50%; 
   }
   
   .preloader::-webkit-scrollbar {
