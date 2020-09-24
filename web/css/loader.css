@@ -2,8 +2,8 @@ div.preloader {
     position: fixed;
     top: 0;
     left: 0;
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     z-index: 999;
     overflow: hidden;
     background: radial-gradient(white, #8f8f8f);
@@ -24,16 +24,15 @@ div.preloader {
     border-bottom: 2px solid var(--text-color);
     cursor: wait; 
     border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px; 
+    border-bottom-right-radius: 10px;  
   }
   
   .preloader::-webkit-scrollbar {
-    width: 0px;
-    height: 0px;
+    width: 0px; 
   }
   
   div.preloader span {
-    font-size: 25px;
+    font-size: 25px; 
     border-radius: 50%;
     display: -webkit-box;
     display: -ms-flexbox;

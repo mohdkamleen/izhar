@@ -45,7 +45,7 @@
     transform: translate(-50%, -50%);
     position: absolute;
     border-radius: 50%;
-    border: 5px solid #404355; 
+    border: 5px solid #505694; 
     animation: scroll_down_animation .9s 5s linear infinite;
 }
 
@@ -127,8 +127,9 @@
 
  .btn-group button.btn:hover{
     box-shadow: none;
-    border: 2px solid #888888;
-    color: #777777;
+    border: 2px solid #8082ff;
+    color: #ffffff;
+    background: #505694 ;
 }
  
  
@@ -145,7 +146,7 @@ img.nav_background_img {
     height: 100%;
 }
 
-p{
+h4{
     padding: 20% 5%;
     font-size: 1.5rem;
 }

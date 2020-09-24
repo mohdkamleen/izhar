@@ -109,7 +109,10 @@ img.nav_background_img {
     margin: 10px auto;
     width: 150px;
     border-radius: 30px;
-    background: transparent;
+    color: #ffffff;
+    font-weight: 600;
+    font-family: inherit;
+    background: #505694;
     border: 2px solid #5d5d5d; 
 }
 
