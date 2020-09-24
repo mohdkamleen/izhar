@@ -1,6 +1,6 @@
 let preloader = document.querySelector("div.preloader"); 
 let preloader_counter = document.querySelector("div.preloader span b"); 
-let nav_hamberger_background = document.querySelector("section .body_content_header .nav_hamburger_background"); 
+let nav_hamberger_background = document.querySelector(".nav_hamburger_background"); 
 
 window.onload = () => {
     preloader.classList.add("active"); 

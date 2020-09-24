@@ -54,6 +54,7 @@
   nav .navbar ul li a:hover { 
     box-shadow: var(--box-shadow);
     border: 2px solid #273166;
+    color: #273166;
   }
   
   nav .hamburger {
