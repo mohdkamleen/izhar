@@ -45,10 +45,7 @@
     transform: translate(-50%, -50%);
     position: absolute;
     border-radius: 50%;
-    border: 5px solid #404355;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    border: 5px solid #404355; 
     animation: scroll_down_animation .9s 5s linear infinite;
 }
 
