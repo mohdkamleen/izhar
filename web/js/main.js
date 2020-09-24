@@ -25,7 +25,7 @@ let preloader_counter_function = setInterval(function(){
     if (count_number == 100){
         clearInterval(preloader_counter_function);
     }
-},25) 
+},12) 
 
 
 

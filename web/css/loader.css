@@ -2,7 +2,7 @@ div.preloader {
     position: fixed;
     top: 0;
     left: 0;
-    height: 98%;
+    height: 100%;
     width: 100%;
     z-index: 999;
     overflow: hidden;
@@ -23,8 +23,8 @@ div.preloader {
             flex-direction: column;
     border-bottom: 2px solid var(--text-color);
     cursor: wait; 
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%; 
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px; 
   }
   
   .preloader::-webkit-scrollbar {
@@ -50,8 +50,8 @@ div.preloader {
     -webkit-transition: all .5s 1.5s linear;
     transition: all .5s 1.5s linear;
     color: var(--text-color);
-    -webkit-animation: preloader_animate 2s ease infinite;
-            animation: preloader_animate 2s ease infinite;
+    -webkit-animation: preloader_animate 1.5s ease infinite;
+            animation: preloader_animate 1.5s ease infinite;
     overflow: hidden;
   }
   
@@ -151,14 +151,7 @@ div.preloader {
     -webkit-transform: scale(0);
             transform: scale(0);
   }
-
-@media (max-width: 700px){
-  div.preloader { 
-    border-bottom-left-radius: 1000px;
-    border-bottom-right-radius: 1000px;
-  }
-}
-
+ 
   
   h1 {
     height: 200vh;
