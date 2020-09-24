@@ -16,10 +16,9 @@
     top: 5px;
     right: 5px;
     height: 90px;
-    width: 110 px;
-    background: var(--radial-gradient);
-    background: red;
-    z-index: 1;
+    width: 110px;
+    background: var(--radial-gradient); 
+    z-index: -1;
     display: none;
     transform: scale(0);
     transform-origin: right top;
