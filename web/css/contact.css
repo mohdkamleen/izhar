@@ -114,11 +114,14 @@ img.nav_background_img {
     font-family: inherit;
     background: #505694;
     border: 2px solid #5d5d5d; 
+    transition: .3s all ease;
 }
 
 .contact-form form input[type="submit"]:hover{ 
     box-shadow: var(--box-shadow);
     border: 2px solid #282b5a; 
+    background: transparent;
+    color: #282b5a; 
 }
 
 @media (max-width: 700px){  

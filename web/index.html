@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/loader.css">
-    <link rel="stylesheet" href="css/main.css"> 
+    <link rel="stylesheet" href="css/main.css">
 </head>
 
 <body>
@@ -29,7 +29,7 @@
 
             <div class="navbar">
                 <ul>
-                    <li><a href="#" >Home </a></li>
+                    <li><a href="#">Home </a></li>
                     <li><a href="#">About us</a></li>
                     <li><a href="contact/">Contact</a></li>
                     <li><a href="#">More</a></li>
@@ -45,13 +45,16 @@
         <section>
             <div class="body_content_header">
                 <div class="nav_background"></div>
-                <div class="nav_hamburger_background"></div> 
-                <a href="#scroll_bottom_target"><div class="scroll_down"></div></a>
-                
+                <div class="nav_hamburger_background"></div>
+                <a href="#trigger" class="trigger-target">
+                    <div class="scroll_down"></div>
+                </a>
+
                 <div class="header_top">
                     <div class="header_text">
                         <div class="text">
-                            <span>hey!!!!</span> <hr>
+                            <span>hey!!!!</span>
+                            <hr>
                             <h2>I'm <span class="type_text"></span></h2>
                         </div>
                         <div class="btn-group">
@@ -63,25 +66,56 @@
                         <img class="nav_background_img" src="media/image/web_developer.svg" alt="header image">
                     </div>
                 </div>
-                
+
             </div>
         </section>
     </header>
 
     <div class="container">
 
-        <h4 id="scroll_bottom_target">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quae obcaecati molestias voluptates praesentium itaque eveniet excepturi qui dolorum asperiores libero est modi, doloremque, expedita ipsa officiis maxime quaerat aut? Quas dignissimos cupiditate eum voluptatem commodi pariatur omnis. Beatae aliquam vero culpa inventore libero, enim, doloremque tempore quasi quidem maxime ipsam voluptas aut exercitationem corrupti dolores veritatis ex et odio itaque debitis iusto provident sunt? Officia recusandae minus quia eaque maiores amet rem eos quo reiciendis. Tempora quia tempore nostrum veritatis itaque quibusdam doloribus voluptate quod dignissimos eum, soluta ullam distinctio, atque velit aliquam mollitia? Dolorum, ut dolorem sint corporis iusto sapiente vero veritatis hic aperiam deleniti illum ab officia repudiandae, cumque magni. Enim, quos excepturi. Commodi sunt dolore, necessitatibus ab officia, pariatur maxime quod ipsum maiores ipsa temporibus quam mollitia nulla enim rerum sapiente! Commodi molestias eligendi quod nostrum nisi sapiente nesciunt officia itaque blanditiis tenetur asperiores pariatur harum nemo optio unde amet debitis repellat distinctio, non delectus ab nobis quae vitae architecto. Minima, dicta? Explicabo sint quam, fugiat ipsum doloremque optio sit est tenetur! Inventore velit, neque earum vel assumenda excepturi unde cum? Cum excepturi, qui, impedit assumenda dignissimos quos nesciunt adipisci saepe similique eveniet enim aut dicta!
+        <h4 id="trigger">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quae obcaecati molestias voluptates
+            praesentium itaque eveniet excepturi qui dolorum asperiores libero est modi, doloremque, expedita ipsa
+            officiis maxime quaerat aut? Quas dignissimos cupiditate eum voluptatem commodi pariatur omnis. Beatae
+            aliquam vero culpa inventore libero, enim, doloremque tempore quasi quidem maxime ipsam voluptas aut
+            exercitationem corrupti dolores veritatis ex et odio itaque debitis iusto provident sunt? Officia recusandae
+            minus quia eaque maiores amet rem eos quo reiciendis. Tempora quia tempore nostrum veritatis itaque
+            quibusdam doloribus voluptate quod dignissimos eum, soluta ullam distinctio, atque velit aliquam mollitia?
+            Dolorum, ut dolorem sint corporis iusto sapiente vero veritatis hic aperiam deleniti illum ab officia
+            repudiandae, cumque magni. Enim, quos excepturi. Commodi sunt dolore, necessitatibus ab officia, pariatur
+            maxime quod ipsum maiores ipsa temporibus quam mollitia nulla enim rerum sapiente! Commodi molestias
+            eligendi quod nostrum nisi sapiente nesciunt officia itaque blanditiis tenetur asperiores pariatur harum
+            nemo optio unde amet debitis repellat distinctio, non delectus ab nobis quae vitae architecto. Minima,
+            dicta? Explicabo sint quam, fugiat ipsum doloremque optio sit est tenetur! Inventore velit, neque earum vel
+            assumenda excepturi unde cum? Cum excepturi, qui, impedit assumenda dignissimos quos nesciunt adipisci saepe
+            similique eveniet enim aut dicta!
         </h4>
 
     </div>
- 
 
-    <script src="https://code.jquery.com/jquery-3.5.1.js" ></script>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
     <script src="js/nav.js"></script>
     <script src="js/main.js"></script>
     <script src="js/type.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".trigger-target").on('click', function (event) {
+                if (this.hash !== "") {
+                    event.preventDefault();
+
+                    var hash = this.hash;
+
+                    $('html, body').animate({
+                        scrollTop: $(hash).offset().top
+                    }, 1000, function () {
+                        window.location.hash = hash;
+                    });
+                }
+            });
+        });
+    </script>
 
 </body>
 
