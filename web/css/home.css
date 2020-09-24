@@ -11,6 +11,54 @@
     background: linear-gradient(to bottom, transparent, #888888); 
 }
  
+.scroll_down{
+    position: absolute;
+    left: 50%;
+    bottom: 5%;
+    height: 60px;
+    width: 40px;
+    border-radius: 40px;
+    border: 2px solid #777777;
+    cursor: pointer;
+    z-index: 99;
+    transition: .5s all linear; 
+}
+
+.scroll_down::after{
+    content: "";
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid #404355;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: scroll_down_animation 1s linear infinite;
+}
+
+.scroll_down::before{
+    content: "";
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    border-radius: 50%;
+    border: 5px solid #404355;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: scroll_down_animation .9s 5s linear infinite;
+}
+
+@keyframes scroll_down_animation{
+    to{
+        top: 80%;
+        opacity: 0; 
+    }
+}
+
 .nav_hamburger_background{ 
     position: fixed;
     top: 5px;
@@ -51,7 +99,8 @@
  .text span{
     position: relative;
     text-transform: capitalize;
-    font-size: 2rem; 
+    font-size: 2.3rem; 
+    -webkit-text-stroke: 1px #666666;
     color: var(--text-color);
 }
  
@@ -90,6 +139,17 @@ img.nav_background_img {
     margin-right: 10rem;
     height: 350px; 
 } 
+
+
+.container{ 
+    position: absolute;
+    top: 100%;
+    width: 100%; 
+    height: 100vh;
+    padding: 10% 5%;
+    font-size: 20px;
+}
+
 
 @media (max-width: 700px){ 
 
