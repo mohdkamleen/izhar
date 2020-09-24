@@ -65,13 +65,14 @@
     -webkit-text-stroke: 1px rgba(54, 62, 128, 0.644) ;
 }
 
- .btn-group .btn{
+ .btn-group button.btn{
     position: relative;
     padding: 10px 20px;
     font-weight: 600; 
     border-radius: 20px;
     background: transparent ;
     margin-top: 20px;
+    margin: 7px;
     font-size: 17px; 
     transition: .2s ease;
     box-shadow: var(--box-shadow);
