@@ -169,6 +169,10 @@
     nav .navbar ul li a {
       font-size: 25px;
     }
+    nav .navbar ul li a:hover {
+      background: transparent;
+      color: #535aa1;
+    }
     nav .hamburger {
       display: block;
     }

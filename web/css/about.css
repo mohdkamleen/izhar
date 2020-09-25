@@ -50,13 +50,21 @@ img.nav_background_img {
 
 .about-me { 
     position: relative; 
-    width: 100%; 
-    margin: 5%;
-    max-width: 500px;
+    width: 100%;  
+    max-width: 500px; 
     min-width: 400px;  
-    padding: 3rem 0rem; 
-    border: 2px solid #888888;
+    padding: 3rem 0rem;  
 } 
+ 
+.about-me h3{
+    font-size: 25px;
+    font-weight: 400;
+    margin: 5%;
+    background: linear-gradient(rgb(59, 78, 116), rgb(255, 255, 255)); 
+    color: transparent;
+    -webkit-text-stroke: 1px #797979;
+    -webkit-background-clip: text; 
+}
  
  
 @media (max-width: 700px){  
@@ -68,21 +76,16 @@ img.nav_background_img {
     clip-path: circle(70vh at 90% -25vh);   
     }  
     img.nav_background_img {
-        width: 250px;
+        width: 250px; 
     }
     
 .body_content_header .header_top { 
     justify-content: center;
     flex-direction: column;
-}
-.about-me h3{
-    font-size: 20px;
-    font-weight: 400;
-    background: linear-gradient(red, green);
-    -webkit-te
-    color: transparent;
-    -webkit-text-stroke: 1px #5c609e;
-}
+} 
+.about-me h3 {  
+    font-size: 20px; 
+} 
  
 }
 
