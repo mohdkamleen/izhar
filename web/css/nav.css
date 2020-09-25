@@ -18,6 +18,13 @@
     margin: 14px;
     -webkit-text-stroke: 1px rgba(15, 28, 149, 0.644) ;
     font-size: 20px;
+    transition:all .5s linear;
+  }
+
+  nav .navigation .logo.active{
+    position: fixed;
+    z-index: 6; 
+    color: rgb(41, 47, 78);
   }
 
   nav .navigation .logo span{
@@ -28,6 +35,7 @@
   nav .navbar {
     float: right;
     margin: 10px;
+    transition:all .5s linear;
   }
   
   nav .navbar ul li {
