@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="assets/favicon/mstile-144x144.png">
+    <meta name="msapplication-config" content="browserconfig.xml">
+    <meta name="theme-color" content="#888">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Izhar">
+    <title>Neda Hospital</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Short+Stack&display=swap">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            text-decoration: none;
+            outline: none;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        ::selection {
+            color: #222222;
+            text-shadow: 1px 1px 1px gray,
+                1px 1px 2px gray,
+                1px 1px 3px gray;
+
+        }
+
+        .svg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 90vh;
+            background: url(undraw_medicine.svg), linear-gradient(#ffffff 30%, #34ac17) no-repeat;
+            background-size: cover;
+        }
+
+        svg {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .search_icon {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            border: 1px solid #555555;
+            border-left: none;
+            display: none;
+            border-radius: 50% 67% 17% 41% / 46% 56% 73% 18%;
+            padding: 10px;
+            z-index: 1;
+            color: #555555;
+            background: linear-gradient(-45deg, #d3d2d2, transparent 60%);
+        }
+
+        .navbar_icon {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            z-index: 1;
+            border: 1px solid #555555;
+            border-left: none;
+            border-radius: 41% 17% 67% 50% / 18% 73% 56% 46%;
+            padding: 10px;
+            display: none;
+            color: #555555;
+            transform: rotate(180deg);
+            background: linear-gradient(-135deg, #d3d2d2, transparent 60%);
+        }
+
+        .navbar_icon:hover,
+        .search_icon:hover {
+            background: transparent;
+        }
+
+        div ul.menu {
+            z-index: 11111111;
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        div ul.menu li {
+            transform: rotate(90deg);
+            margin: 60px 5px;
+            font-size: 20px;
+        }
+
+        div ul.menu li a {
+            color: #555555;
+            text-transform: uppercase;
+            transition: .2s;
+        }
+
+        div ul.menu li a:hover {
+            text-decoration: none;
+            text-shadow: 0px 0px 30px #050505;
+            color: #26fb00;
+        }
+
+        p{
+            font-size: 20px;
+        }
+
+
+
+        .header_text {
+            position: absolute;
+            height: 100;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: transparent;
+            -webkit-text-stroke: 1px #0c7c0c;
+        }
+ 
+        .animation__header_text {
+            animation: animation__header_text linear 2s infinite alternate;
+        }
+
+        @keyframes animation__header_text {
+            0% {
+                -webkit-text-stroke: 1px #0400f8;
+            }
+
+            20% {
+                -webkit-text-stroke: 1px #d45df1;
+            }
+
+            40% {
+                -webkit-text-stroke: 1px rgb(156, 3, 3);
+            }
+
+            60% {
+                -webkit-text-stroke: 1px #f0ff1b;
+            }
+
+            80% {
+                -webkit-text-stroke: 1px #a70eff;
+            }
+
+            100% {
+                -webkit-text-stroke: 1px #04ff32;
+            }
+        }
+
+
+        .container {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        @media (max-width: 700px) {
+
+            .navbar_icon,
+            .search_icon {
+                display: block;
+            }
+
+            div ul.menu {
+                position: fixed;
+                top: 0;
+                left: 0;
+                height: 100vh;
+                overflow: hidden;
+                width: 100vw;
+                z-index: 2;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                font-size: 2rem;
+                text-align: center;
+                transition: all .3s linear;
+                transform-origin: top right;
+                transform: scale(0);
+                clip-path: polygon(75% 0, 100% 24%, 100% 100%, 0 100%, 0 0);
+            }
+
+            div ul.menu li a {
+                color: #555555;
+                font-weight: bold;
+                overflow: hidden;
+            }
+
+            div ul.menu li a::before {
+                content: attr(data-text);
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 60px;
+                display: none;
+                opacity: .2;
+                transition: letter-spacing .8s ease-in-out;
+            }
+
+            div ul.menu li a:hover::before {
+                display: block;
+                letter-spacing: 20px;
+            }
+
+            div ul.menu li a:hover {
+                text-decoration: none;
+                text-shadow: none;
+            }
+
+            div ul.menu li {
+                transform: scale(0);
+                margin: 5px 50px;
+                font-size: 2rem;
+            }
+
+            div ul.menu li:nth-child(1) {
+                transition: all .3s .3s linear;
+            }
+
+            div ul.menu li:nth-child(2) {
+                transition: all .3s .4s linear;
+            }
+
+            div ul.menu li:nth-child(3) {
+                transition: all .3s .5s linear;
+            }
+
+            div ul.menu.active {
+                background: linear-gradient(rgba(255, 251, 251, 0.9), rgba(99, 219, 88, 0.9));
+                display: flex;
+                transform: scale(1);
+            }
+
+            div ul.menu.active li {
+                transform: scale(1);
+            }
+
+            div.searchbar {
+                position: fixed;
+                text-align: center;
+                height: 100vh;
+                display: grid;
+                place-items: center;
+                width: 100vw;
+                background: linear-gradient(rgba(255, 251, 251, 0.9), rgba(109, 157, 247, 0.9));
+                transform: scale(0);
+                transition: all .3s linear;
+                opacity: 0;
+                transform-origin: top left;
+                clip-path: polygon(26% 0, 100% 0, 100% 100%, 0 100%, 0 23%);
+                z-index: 2;
+                overflow: hidden;
+            }
+
+            div.searchbar.active {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            #search_input {
+                width: 100%;
+                font-size: 1.3rem;
+                padding: 5px 10px;
+                background: transparent;
+                border: 1px solid #555555;
+                transition: all .3s .3s linear;
+                border-radius: 5px;
+                text-indent: 10px;
+                transform: scale(0);
+            }
+
+            #search_button {
+                transition: all .3s .4s linear;
+                transform: scale(0);
+                border: 1px solid #555555;
+                border-radius: 5px;
+                padding: 2px 10px;
+                background: transparent;
+            }
+
+            div.searchbar.active #search_input,
+            div.searchbar.active #search_button {
+                transform: scale(1);
+            }
+
+            #search_input:focus {
+                box-shadow: 1px 1px 5px 1px rgb(152, 152, 167),
+                    1px -1px 7px 2px rgb(100, 100, 102);
+                border-radius: 5px;
+            }
+
+        }
+
+        @media (min-width: 1000px) {
+
+            div.searchbar {
+                position: absolute;
+                z-index: 8;
+                top: 20px;
+                left: 20px;
+            }
+
+            #search_input {
+                width: 100%;
+                font-size: 1.3rem;
+                padding: 5px 10px;
+                background: transparent;
+                border: 1px solid #555555;
+                transition: all .3s .3s linear;
+                border-radius: 5px;
+                text-indent: 10px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="search_icon fa fa-search"></div>
+    <div class="searchbar">
+        <form action="#">
+            <input type="search" name="search" autocomplete="off" placeholder="search here" id="search_input"> <br>
+        </form>
+    </div>
+
+
+    <div class="navbar_icon fa fa-bars "> </div>
+    <div class="navbar">
+        <ul class="menu ">
+            <li><a href="#" data-text="home">&nbsp; Home &nbsp; </a></li>
+            <li><a href="#" data-text="about">&nbsp; About &nbsp; </a></li>
+            <li><a href="#" data-text="contact">&nbsp; Contact &nbsp; </a></li>
+        </ul>
+    </div>
+
+    <div class="header_circle"></div>
+    <div class="svg">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 250">
+            <path fill="#fff" fill-opacity="1"
+                d="M0,96L48,122.7C96,149,192,203,288,197.3C384,192,480,128,576,133.3C672,139,768,213,864,218.7C960,224,1056,160,1152,138.7C1248,117,1344,139,1392,149.3L1440,160L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+            </path>
+        </svg>
+        <h1 class="text-center text-primary mt-2" style="font-family: 'Short Stack';">Neda<span
+                class="text-success">Hospital</span></h1> <br><br><br><br><br>
+
+        <div class="header_text">
+            <h1 class="text-warning">INTEGRATING ARTIFICIAL INTELLIGENCE INTO RADIOLOGY IMAGING.</h1>
+            <h1 class="text-primary">Products <span class="type_text bg-warning"></span> </h1>
+        </div>
+    </div>
+
+
+    <div class="container">
+
+        <div class="jumbotron">
+            <h2 class="text-primary"> Health Care.</h2>
+            <p>For Hole Family
+                In healthcare sector,service excellence is the facility of
+                the hospital as healthcare service provider to consistently.</p>
+        </div> <br><br>
+
+        <div class="row">
+            <div class="col-sm-4">
+                <img class="img-fluid" src="ambulance.png" style=height:60px; />
+                <h3 class="mt-3">Hospitality</h3>
+                <p class="mt-3">Clinical excellence must be the priority<br />for any healthcare service provider.</p>
+                <a href="#" class="btn btn-success">Apply For A Bed</a>
+
+
+
+            </div>
+            <div class="col-sm-4">
+                <img class="img-fluid" src="emergency.jpg" style=height:60px; />
+                <h3 class="mt-3">Emergency Care</h3>
+                <p class="mt-3">Clinical excellence must be the priority<br />for any healthcare service provider.</p>
+                <a href="#" class="btn btn-danger">+10 672 356 3567</a>
+
+            </div>
+            <div class="col-sm-4">
+                <img class="img-fluid" src="chamber.png" style=height:60px; />
+                <h3 class="mt-3">Chamber Service</h3>
+                <p class="mt-3">Clinical excellence must be the priority<br />for any healthcare service provider.</p>
+                <a href="#" class="btn btn-primary">Make An Appointment</a>
+
+            </div>
+        </div> <br><br><br>
+ 
+
+          <div class="card-group">
+            <div class="card">
+              <img src="https://source.unsplash.com/350x160/?hospital,bed" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"> Longevity News Alert</h5>
+                <p class="card-text">Dear Future Centenarian, I got a recent email from Dr Ron Klatz, co-founder of the organization that put anti-aging medicine on the map, The American Academy of Anti-Aging Medicine (A4M) https://wwwa4mcom/ In fact, they are the group who coined the term “anti-aging,” A4M is a US</p>
+                <p class="card-text"><button class="btn btn-primary"> Read more </button></p>
+              </div>
+            </div> <br><br>
+            <div class="card">
+              <img src="https://source.unsplash.com/350x160/?hospital,ners" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Why I Want to Cure Aging</h5>
+                <p class="card-text">Dear Future Centenarian, Last weekend, I went to a hospital… TWICE Friday eve, I was scheduled for minor surgery Then Sunday, I had to go to the ER due to a post op complication Now, it all sounds worse than it was I’m totally fine But what the weekend did do was give me time to think</p>
+                <p class="card-text"><button class="btn btn-success"> Read more </button></p>
+              </div>
+            </div><br><br>
+            <div class="card">
+              <img src="https://source.unsplash.com/350x160/?doctor,ambulance" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Squeeze the Most from Your Medical Advice</h5>
+                <p class="card-text">Dear Future Centenarian, You know why the advice from a grizzled pro anti-aging medicine doctor is worth so much more than what you'd learn in a PhD program Because you don't actually learn your lesson by reading about it That's just too passive to be effective You learn it best by</p>
+                <p class="card-text"><button class="btn btn-primary"> Read more </button></p>
+              </div>
+            </div><br><br>
+            <div class="card">
+              <img src="https://source.unsplash.com/350x160/?doctor,hospital" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Here’s the Value of Your Life</h5>
+                <p class="card-text">Dear Future Centenarian, What are you worth No, I don’t mean how much money do you have, or what your entire estate is worth I mean, what are YOU worth Most of us get so caught up in business, family, day-to-day living that we never consider the monetary value of our lives That’s</p>
+                <p class="card-text"><button class="btn btn-success"> Read more </button></p>
+              </div>
+            </div>
+          </div> <br><br><br>
+
+
+          <h2 class="text-center text-primary">Start Designing a Healthier World</h2>
+          <p class="text-center text-secondary">Whether it's at home, the intensive care, or a nursing home, patients deserve the best care technology has to offer. Allowing for smaller designs with lower overhead cost, vibration-free movement and powerful yet energy-efficient drives, Trinamic enables Health Engineers to push the envelope on medical applications. Let's raise the quality of healthcare together with world's most advanced motor and motion control.</p>
+<br><br><br>
+
+
+        <div class="text-center">
+          <img src="cool.png" alt="" class=" mx-auto d-block">
+        </div>
+          <h2 class="text-center text-primary">Cool</h2>
+          <p class="text-center text-secondary">Drive motors the energy-efficient way. Trinamic products automatically reduce current to the minimum needed, keeping the motor cool.</p>
+
+        <div class="text-center">
+          <img src="free.png" alt="" class=" mx-auto d-block">
+        </div>
+          <h2 class="text-center text-primary">Vibration-Free</h2>
+          <p class="text-center text-secondary">Remove vibrations and noise with flawless motion control. Current loops close to a perfect sine wave allow smooth and precise positioning.</p>
+
+        <div class="text-center">
+          <img src="charg.png" alt="" class=" mx-auto d-block">
+        </div>
+          <h2 class="text-center text-primary">Battery-Powered</h2>
+          <p class="text-center text-secondary">Battery-powered ICs and miniaturized modules save precious energy and space, allowing you to design portable medical devices that last.</p>
+ 
+
+          <div class="jumbotron">
+            <h2 class="text-success"> Motion Control for Medical and Healthcare</h2> 
+        </div>
+        <p class="text-center text-secondary" >Risk-elimination in the treatment of patients is a major concern in the medical sector. Embedded motion control is key to reliable and streamlined medical devices and instruments offloading healthcare systems from increasing pressures such as the aging society, limited workforce, and rising costs. Whether it's peristaltic pumps, respirators and ventilators, infusion pumps, radiography or optometry, Trinamic's industry-leading solutions take care of perfect motion control that's reliable and retraceable, so you don't have to.</p>
+
+        <br><br><br>
+
+          <img src="Peristaltic_Pump.jpg" alt="" class="img-responsive "> <br>
+          <p class=" text-secondary" style="font-size: 20px;"><span style="font-size: 23px;">Peristaltic Pumps</span>  <br>
+            Maintaining cell structure and protein folding is critical for peristaltic pumps used in medical applications. By providing silent, vibration-free control of pumps, StealthChop prevents unwanted shear rates of precious liquids. Combined with other leading solutions such as StallGuard for detecting step loss and CoolStep for energy-efficient operation keeping the motor cool, Trinamic offers perfect control of your pump. Whether it's for dialysis, dosing medication or sanitary pumps, Trinamic's solutions protect material integrity with perfect flow control.</p>
+        <br><br>
+        <p class=" text-secondary" style="font-size: 20px;"><span style="font-size: 23px;">Syringe Infusion Pumps</span>  <br>
+        When it comes to delivering fluids like nutrients and medication to patients, every drop counts. That's why infusion pumps need to precisely control flow rate - independent of fluid friction and without losing track of the dosage. Trinamic's StallGuard™ is specifically designed for syringe pumps to support reliable and repeatable homing without the need for limit switches. Allowing for smallest designs that are silent and energy-efficient, Trinamic's plug-and-play solutions give complete control over dosage devices for highest reliability and traceability.</p>
+   
+
+
+          <img src="Syringe_Infusion_Pumps.jpg" alt="" class="img-responsive mx-auto">  <br>
+           
+          <img src="Medical_Ventilator.png" alt="" class="img-responsive mx-auto d-block">  <br>
+          
+
+          <p class=" text-secondary" style="font-size: 20px;"><span style="font-size: 23px;">Medical Ventilators and CPAP Devices</span>  <br>
+            Medical ventilators have come a long way since the iron lung. Ranging from controlled mechanical ventilation to CPAP, ventilators for healthcare and medical use are vital  in saving lives. Thanks to Trinamic's driver ICs and board-level solutions for 3-phase BLDC motors, Health Engineers can easily design low-inductance, high-speed drives without having to worry about the motor's current ripple. Together with integrated high-resolution feedback system and field oriented control, Trinamic offers industry-leading control for powerful and energy-efficient drives.</p>
+       <br><br> 
+
+       <p class=" text-secondary" style="font-size: 20px;"><span style="font-size: 23px;">Ophthalmic Devices</span>  <br>
+        Eye-care requires the highest accuracy to prevent false outcomes. Ensuring a correct diagnosis in the shortest time possible, ophthalmic devices require state-of-the-art motor and motion control to position the patient and control the laser. With decades of motor and motion control experience embodied in plug-and-play solutions, Trinamic brings industrial-grade technology to medical and consumer optometry. Save precious resources and optimize product development with silent, reliable, extremely precise and energy-efficient solutions.</p>
+   <br><br> 
+
+       
+
+          <img src="Optometry_Device.jpg" alt="" class="img-responsive mx-auto d-block">  <br>
+          
+          <img src="TOSV_Screen_1.jpg" alt="" class="img-responsive mx-auto d-block">  <br>
+
+
+    <p class=" text-secondary" style="font-size: 20px;"><span style="font-size: 23px;">Trinamic Open-Source Ventilator</span>  <br>
+        The global outbreak of COVID-19 pushes healthcare systems around the world to their limits and medical companies are working hard to produce the much-needed medical equipment. Besides supporting all sorts of ventilator projects, Trinamic's engineers started to develop an open-source ventilator platform to inspire engineers and medical companies with other ways to design a medical ventilator. Named TOSV - Trinamic Open-Source Ventilator - the platform uses the TMC4671 combined with the TMC6100 stacked on a Raspberry Pi for interfacing.</p>
+   <br><br> 
+
+<button class="btn btn-primary">More</button> <br><br><br>
+
+
+
+<div class="row"> 
+    <div class="col-sm-4"> 
+        <img src="csm_Trinamic_Battle-Tested_7465ca9d73.png" class="card-img-top" alt="..."> 
+          <h5 class="card-title">Battle-Tested</h5>
+          <p class="card-text">Using battle-tested building blocks such as own IP, schematics, and components, Trinamic cuts down both development cost, time, and risk.
+        </p> 
+    </div>
+    <div class="col-sm-4"> 
+        <img src="csm_Trinamic_Quality_b6080f88f8.png" class="card-img-top" alt="..."> 
+          <h5 class="card-title">Highest Quality</h5>
+          <p class="card-text">Trinamic’s Quality Management is ISO9001:2015 and ISO13485:2016 certified, testifying to their commitment to deliver only the highest quality.
+        </p> 
+    </div>
+    <div class="col-sm-4">  
+        <img src="csm_Trinamic_Partners_87e6cd696d.png" class="card-img-top" alt="..."> 
+          <h5 class="card-title">Reliable Partners</h5>
+          <p class="card-text">A global network of reliable partners and suppliers guarantees Trinamic's strong supply chain, including just-in-time delivery.</p>
+        </div>  
+  </div>  
+<br><br><br><br>
+
+<p class="text-center container-fluid" style="background: #333333; color: floralwhite; padding: 10px; width: 90vw;"> © 2020 tab. All rights reserved </p> 
+<br> 
+</div> 
+
+
+    <script>
+        let menu_toggel = document.querySelector(".navbar_icon");
+        let menu = document.querySelector(".menu");
+        menu_toggel.addEventListener("click", () => {
+            menu.classList.toggle("active");
+        })
+
+        let search_toggel = document.querySelector(".search_icon");
+        let search = document.querySelector(".searchbar");
+        search_toggel.addEventListener("click", () => {
+            search.classList.toggle("active");
+        })
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"
+        integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+    <script src="https://raw.githubusercontent.com/mattboldt/typed.js/master/src/typed.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
+    <script>
+        var typed = new Typed('.type_text', {
+            strings: ["", "Integrated Circuits", "Embedded Modules", "Motors & Encoders", "PANdrive Smart Motors", "Evaluation Kits", "Custom Solutions"],
+            loop: true,
+            backSpeed: 30,
+            typeDelay: 1000,
+            cursorChar: '_',
+            typeSpeed: 100
+
+        });
+    </script>
+</body>
+
+</html> 
+
+
+
+
+
+
