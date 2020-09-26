@@ -62,7 +62,7 @@
     transition: all .1s linear; 
   }
   
-  nav .navbar ul li a:hover { 
+  nav .navbar ul li a:hover, nav .navbar ul li .active { 
     box-shadow: var(--box-shadow);
     border: 2px solid #8082ff;
     color: #ffffff;
@@ -169,7 +169,7 @@
     nav .navbar ul li a {
       font-size: 25px;
     }
-    nav .navbar ul li a:hover {
+    nav .navbar ul li a:hover, nav .navbar ul li .active {
       background: transparent;
       color: #535aa1;
     }

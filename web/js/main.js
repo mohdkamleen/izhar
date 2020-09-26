@@ -2,10 +2,17 @@ let preloader = document.querySelector("div.preloader");
 let preloader_counter = document.querySelector("div.preloader span b"); 
 let nav_hamberger_background = document.querySelector(".nav_hamburger_background"); 
 let scroll_down = document.querySelector(".scroll_down"); 
+let main_div = document.querySelector("#main_div"); 
 
 window.onload = () => {
     preloader.classList.add("active"); 
 }  
+
+window.onresize = () => {
+    if(window.innerWidth == 701){
+        main_div.style.background = "red";
+    }
+}
 
 window.onscroll = () => {
     let windowPageYOffset = window.pageYOffset;
