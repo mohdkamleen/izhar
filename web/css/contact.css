@@ -328,7 +328,30 @@ img.nav_background_img {
  
  
 
+ @media (min-width:1300px) { 
 
+    .social a { 
+        transition: all 2s ease;
+    }
+    
+    .social a svg{ 
+        transition: all .5s 1.5s ease;
+    }
+    
+
+    .social a:hover{ 
+        transform: perspective(800px) rotateX(360deg);  
+        background: var(--radial-gradient);
+        border-color:  rgb(117, 117, 117);
+    }
+
+    .social a:hover svg{ 
+        fill: rgb(117, 117, 117);
+    }
+    
+     
+
+ }
 
 
 
