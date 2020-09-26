@@ -9,14 +9,14 @@
     align-items: center; 
 }
 
-h4{
+.container h4{
     padding: 50px 5%;
     font-size: 1.7rem;
     font-weight: 400;
     flex: 1;
     min-width: 400px; 
     margin: 5%;
-    background: linear-gradient(rgb(59, 78, 116), rgb(255, 255, 255)); 
+    background: linear-gradient(rgb(89, 144, 253), rgb(255, 255, 255)); 
     color: transparent;
     -webkit-text-stroke: 1px #797979;
     -webkit-background-clip: text; 
@@ -25,25 +25,48 @@ h4{
 .container .img{
     flex: 2; 
     position: relative;
-    width: 100%; 
-    background: radial-gradient(rgb(210, 218, 221), transparent 50%);
-    background-blend-mode: screen;
+    width: 100%;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container2 .img{
+    flex: 1; 
+    position: relative;
+    width: 100%;  
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .container .img img{  
     width: 70%; 
-    border-radius: 50%;  
-}
-
+    border-radius: 50%;   
+}  
+.container2 .img img{  
+    width: 80%;   
+    opacity: .8;
+}  
 
 .container2{ 
     position: absolute;
     top: 200%;
-    width: 100%;  
+    width: 100%;  padding: 10px 5%;
     height: 100vh;
     overflow: hidden;
     display: flex;
     justify-content: space-around;
     align-items: center; 
+}
+
+.container2 h4{ 
+    font-size: 1.5rem;
+    font-weight: 400;
+    flex: 1;  
+    background: linear-gradient(rgb(89, 144, 253), rgb(255, 255, 255)); 
+    color: transparent;
+    -webkit-text-stroke: 1px #797979;
+    -webkit-background-clip: text; 
 }
 
 .container2::before{
@@ -63,12 +86,24 @@ h4{
         flex-direction: column;
     }
 
+
     h4{
         font-size: 1.5rem;
     }
     
-.container .img img{  
+    .container .img img{  
     width: 70%; 
     border-radius: 50%;
 }
+    .container2 .img img{  
+    width: 80%; 
+    border-radius: 50%;
+}
+}
+
+@media (max-width: 1200px){
+    
+    .container2{
+        flex-direction: column-reverse; 
+    }
 }
