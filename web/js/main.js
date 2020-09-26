@@ -15,7 +15,7 @@ window.onscroll = () => {
         nav_hamberger_background.classList.remove("show");
     }
 
-    if(windowPageYOffset > 0){
+    if(windowPageYOffset > 10){
         scroll_down.style.top = "90%";
         scroll_down.style.opacity = "0"; 
     } else {
