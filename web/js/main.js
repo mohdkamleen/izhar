@@ -9,9 +9,9 @@ window.onload = () => {
 }  
 
 window.onresize = () => {
-    if(window.innerWidth == 701){
-        main_div.style.background = "red";
-    }
+    if(window.innerWidth > 1000){
+        main_div.setAttribute("id", "main_page");
+    } 
 }
 
 window.onscroll = () => {

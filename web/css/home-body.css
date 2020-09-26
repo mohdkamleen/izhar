@@ -1,3 +1,17 @@
+.main_container{ 
+    position: absolute;
+    top: 100%; 
+}
+
+#main_div{
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
 .container{ 
     position: absolute;
     top: 100%;
@@ -48,11 +62,10 @@
     opacity: .8;
 }  
 
-.container2{ 
-    position: absolute;
-    top: 200%;
-    width: 100%;  padding: 10px 5%;
-    height: 100vh;
+.container2{  
+    width: 100%;  
+    padding: 10px 5%;
+    height: 100%;
     overflow: hidden;
     display: flex;
     justify-content: space-around;
@@ -69,7 +82,7 @@
     -webkit-background-clip: text; 
 }
 
-.container2::before{
+.container::before{
     content: "";
     position: absolute;
     top: 0;
@@ -83,7 +96,7 @@
 
 @media (max-width: 700px){
     .container{
-        flex-direction: column;
+        flex-direction: column-reverse;
     }
 
 
@@ -104,6 +117,6 @@
 @media (max-width: 1200px){
     
     .container2{
-        flex-direction: column-reverse; 
+        flex-direction: column; 
     }
 }
