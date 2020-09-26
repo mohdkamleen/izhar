@@ -171,7 +171,7 @@ img.nav_background_img {
     display: flex;
     justify-content: center;
     align-items: center; 
-    transition:transform .5s .5s ease-in-out;
+    transition:transform .5s .5s ease-in-out; 
 }
 
 .social a{ 
@@ -185,18 +185,16 @@ img.nav_background_img {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.social a::after{
-    content: "";
+    box-shadow: var(--box-shadow);
+    overflow: hidden;
 }
 
 .social a svg{   
     height: 60%;
     width: 60%;   
-    fill: #1e1950;
+    fill: #1e1950; 
+    transition: .2s .3s;
 }
-
 
 @media (max-width: 700px){  
     .nav_hamburger_background{
@@ -219,6 +217,26 @@ img.nav_background_img {
         width: 60px;
         transform: rotate(-45deg);
     }
+    
+.social a::after{
+    content: "";
+    position: absolute;
+    height: 90px; 
+    transform: scale(.35);
+    transform-origin: top left;
+    width: 90px;
+    background: radial-gradient(rgb(135, 136, 138),rgb(194, 198, 202));
+    z-index: -9;
+    transition: transform .3s ease-in ; 
+}
+
+.social a:hover svg{    
+    fill: #f8f8f8;
+} 
+.social a:hover::after{ 
+    transform: scale(1);  
+}
+
 }
 
 @media (max-width: 1000px) and (min-width:700px) { 
@@ -243,6 +261,26 @@ img.nav_background_img {
         width: 70px;
         transform: rotate(-35deg);
     }
+    
+.social a::after{
+    content: "";
+    position: absolute;
+    height: 90px; 
+    transform: scale(.35);
+    transform-origin: top left;
+    width: 90px;
+    background: radial-gradient(rgb(135, 136, 138),rgb(194, 198, 202));
+    z-index: -9;
+    transition: transform .3s ease-in ; 
+}
+
+.social a:hover svg{    
+    fill: #f8f8f8;
+} 
+.social a:hover::after{ 
+    transform: scale(1);  
+}
+
   }
 
 @media (max-width: 1300px) and (min-width:1000px) {
@@ -265,6 +303,26 @@ img.nav_background_img {
         width: 80px;
         transform: rotate(-25deg);
     }
+    
+.social a::after{
+    content: "";
+    position: absolute;
+    height: 90px; 
+    transform: scale(.35);
+    transform-origin: top left;
+    width: 90px;
+    background: radial-gradient(rgb(135, 136, 138),rgb(194, 198, 202));
+    z-index: -9;
+    transition: transform .3s ease-in ; 
+}
+
+.social a:hover svg{    
+    fill: #f8f8f8;
+} 
+.social a:hover::after{ 
+    transform: scale(1);  
+}
+
  
  }
  
