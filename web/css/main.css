@@ -7,22 +7,24 @@
             box-sizing: border-box;
     outline: none;
     box-sizing: border-box;
-    /* scroll-behavior: smooth; */
+    scroll-behavior: smooth;
   }
   
   :root {
     --text-color: #555555;
     --radial-gradient: radial-gradient(rgba(255, 255, 255, 0.4),rgba(143, 143, 143, 0.8));
     --font-family: 'Short Stack'; 
-    --box-shadow: 1px 1px 5px 1px rgba(65, 65, 65, 0.466); 
+    --box-shadow: -4px -4px 10px rgba(255, 255, 255, 1),
+                  inset -4px 4px 10px rgba(0, 0, 0, 0.5), 
+                  inset -4px -4px 10px rgba(255, 255, 255, 1), 
+                  4px 4px 10px rgba(0, 0, 0, 0.5);
   }
   
   body {
     height: 100%;
     width: 100vw;
     overflow-x: hidden;
-    font-family: var(--font-family);
-    min-height: 100vh;
+    font-family: var(--font-family); 
   }
   
  
