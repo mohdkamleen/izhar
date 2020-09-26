@@ -83,13 +83,20 @@ h3 span{
     font-size: 20px;
     padding: 10px;
     border: 2px solid gray;
+    border-top-right-radius: 0px !important;
+    border-bottom-right-radius: 0px !important;
     border-radius: 10px;
 }
 
 .comment input:focus{
     box-shadow: var(--box-shadow);
 }
-
+.comment form{
+    min-width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 button{
     font-size: 20px;
     padding: 5px 20px;
@@ -104,6 +111,10 @@ button{
 .comment input[type="submit"]{
     background: var(--radial-gradient);
     box-shadow: var(--box-shadow);
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: 10px !important;
+    border-bottom-right-radius: 10px !important;
 }
  a{
     color: rgb(85, 85, 85);

@@ -84,9 +84,14 @@ img.nav_background_img {
     font-weight: 400; 
     text-indent: 12px;
     outline: none;
-    border: 2px solid #68696d;
+    border: none;
+    box-shadow: var(--box-shadow); 
     border-radius: 10px;
     background: transparent;
+}
+
+.contact-form form .input-feild input:focus,.contact-form form .input-feild textarea:focus {  
+    background: var(--radial-gradient);
 }
 
 .contact-form form .input-feild input::placeholder,.contact-form form .input-feild textarea::placeholder{
