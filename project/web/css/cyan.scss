@@ -1,0 +1,42 @@
+ 
+  
+  :root {
+    --text-color: #569ea5;
+    --radial-gradient: radial-gradient(rgba(175, 243, 248, 0.4),rgba(224, 224, 224, 0.8));
+    --font-family: 'Short Stack'; 
+    --box-shadow: -4px -4px 10px rgba(255, 255, 255, 1),
+                  inset -4px 4px 10px rgba(169, 229, 233, 0.5), 
+                  inset -4px -4px 10px rgba(255, 255, 255, 1), 
+                  4px 4px 10px rgba(197, 245, 253, 0.5);
+  }
+  
+  body { 
+    overflow-x: hidden;
+    font-family: var(--font-family);  
+    background: rgb(220, 253, 255);
+  }
+   
+ 
+  h3{ 
+    background: linear-gradient(rgb(0, 217, 255), rgb(255, 255, 255)); 
+    color: transparent; 
+    -webkit-background-clip: text; 
+}
+ 
+   
+.nav_background { 
+    background: linear-gradient(to bottom, transparent, #88fff9); 
+}
+.container2 h4{   
+    background: linear-gradient(rgb(24, 222, 236), rgb(255, 255, 255)); 
+    color: transparent; 
+    -webkit-background-clip: text; 
+}
+.container h4{   
+    background: linear-gradient(rgb(255, 255, 255),rgb(23, 252, 221) ); 
+    color: transparent; 
+    -webkit-background-clip: text; 
+}
+
+
+

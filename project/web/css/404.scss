@@ -1,0 +1,20 @@
+
+
+#btn:hover{
+    box-shadow: none;
+    border: 2px solid var(--text-color);
+    background: transparent ; 
+    color: var(--text-color); 
+ }
+ 
+ 
+.btn-group button.btn:hover a{
+    color: var(--tect-color); 
+}
+
+
+.btn-group button.btn a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+
