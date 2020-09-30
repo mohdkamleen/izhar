@@ -21,16 +21,16 @@ window.onscroll = () => {
     }
 
     if(windowPageYOffset > 0){
-        // scroll_down.style.transform = "translateY(-10px)";
+        scroll_down.style.transform = "translateY(-10px)";
         scroll_down.style.opacity = "0"; 
     } else {
-        // scroll_down.style.transform = "translateY(10px)";
+        scroll_down.style.transform = "translateY(10px)";
         scroll_down.style.opacity = "1";
     }
 }
  
 
-// splash screen counter 
+/// ////////splash screen counter /////////////
 var count_number = 0; 
 let preloader_counter_function = setInterval(function(){
     count_number++;
@@ -42,17 +42,34 @@ let preloader_counter_function = setInterval(function(){
 },12) 
 
 
-// window change color and background
+//////////////////// window change color and background////////////
 window.onclick = () => {
-   let arr = ["css/blue.css", "", "css/red.css", "", "css/green.css", "", "css/yellow.css", "", "css/gray.css", "", "css/pink.css", "", "css/cyan.css", "", "css/green2.css", "", "css/red.css", "css/red2.css", "css/blue2.css" ]
-    window.style.zIndex = -9999;
+    let arr = [
+        "", "", "css/change/blue.css",
+        "", "", "css/change/blue2.css",
+        "", "", "css/change/blue3.css",
+        "", "", "css/change/red.css",
+        "", "", "css/change/red2.css",
+        "", "", "css/change/red3.css",
+        "", "", "css/change/green.css",
+        "", "", "css/change/green2.css",
+        "", "", "css/change/yellow.css",
+        "", "", "css/change/yellow2.css",
+        "", "", "css/change/gray.css",
+        "", "", "css/change/gray2.css",
+        "", "", "css/change/pink.css",
+        "", "", "css/change/cyan.css",
+        "", "", "css/change/cyan2.css",
+        "", "", "css/change/red.css"
+    ]
+  
    let styleSheet = arr[Math.floor(Math.random() * arr.length)];
    style.setAttribute("href", styleSheet);
 }
 
 
 
-// mousemove code  
+///////////////// mousemove code  ///////////////
 window.onmousemove  = () => {
             var a = document.createElement("p");
             a.setAttribute("id", "mousemove");
@@ -71,24 +88,6 @@ window.onmousemove  = () => {
            a.style.borderColor = mcol;
           }
 
-
-// service worker 
-
-//////////// its service worker part ////////////
-
-if('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('../sw.js')
-    .then(res => {
-      console.info('Service Worker is Regitser', res);
-    })
-    .catch(err => {
-      console.info('Service Worker is not Register', err);
-    })
-  } else 
-    console.log('Service Worker is not suppoted in your browser');
   
-  
-  
-
 
  

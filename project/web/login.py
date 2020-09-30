@@ -39,7 +39,7 @@ print("""
 	<link rel="stylesheet" href="css/contact.css">
 	<link rel="stylesheet" href="css/loader.css">
 	<link rel="stylesheet" href="css/nav.css">
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/main.css"> 
     <link rel="stylesheet" id="style" >
     <!-- dark mode access style sheet  -->
     <link rel="stylesheet" href="css/dark.css">
@@ -88,7 +88,9 @@ print("""
 
 						<div class="header_top">
 							<h3 style="padding: 10px 5%;">
-								Login Here!!!!
+								Login Form Here! <br> <br>
+								Need to login for an account <br>
+								<button class="btn"><a href="signin.py">SignIn</a></button>
 							</h3>
 
 							<div class="header_img">
@@ -153,7 +155,7 @@ print("""
 				<span class="circle two"></span>
 
 				<form action="action/login.py" method="POST">
-					<h3 class="title">Contact us</h3>
+					<h3 class="title">LogIn</h3>
                     <div class="input-container">
 						<input required type="email" name="email" class="input" id="email" />
 						<label for="">Email</label>
@@ -164,7 +166,7 @@ print("""
 						<label for="">Password</label>
 						<span>Password</span> 
 					</div>  
-					<input type="submit" value="Send" class="btn" />
+					<input type="submit" value="Send" class="btn" /> <br> <br>
 				</form>
 			</div>
 		</div>

@@ -99,7 +99,7 @@ print("""
                                     <h2>I'm <span class="type_text"></span></h2>
                                 </div>
                                 <div class="btn-group">
-                                    <button class="btn "> <a download="kamleen's resume" href="https://mohdkamleen.github.io/digicoders/image/resume.png">Download CV</a></button>
+                                    <button class="btn "> <a download="kamleen's resume" href="https://mohdkamleen.github.io/digicoders/image/resume.PNG">Download CV</a></button>
                                     <button class="btn "><a href="mailto:kamleenmohd@gmail.com"> Hire Me</a></button>
                                 </div>
                             </div>

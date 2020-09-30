@@ -27,6 +27,39 @@
   transform: scale(1);
 } 
 
+button.btn {
+  position: relative;
+  padding: 7px 20px;
+  font-weight: 600;
+  border-radius: 20px;
+  background: transparent;
+  margin-top: 20px;
+  margin: 10px 0px;
+  font-size: 17px;
+  -webkit-transition: .2s ease;
+  transition: .2s ease;
+  -webkit-box-shadow: var(--box-shadow);
+          box-shadow: var(--box-shadow);
+  border: 2px solid #273166; 
+  font-family: inherit;
+}
+
+button.btn:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: 2px solid #8082ff;
+  background: #505694;
+}
+
+button.btn:hover a {
+  color: #ffffff !important;
+}
+
+button.btn a {
+  text-decoration: none; 
+  color: var(--text-color);
+}
+
 .nav_hamburger_background {
   position: fixed;
   top: 5px;

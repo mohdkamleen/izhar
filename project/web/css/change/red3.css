@@ -11,7 +11,7 @@
 body {
   overflow-x: hidden;
   font-family: var(--font-family);
-  background: white;
+  background: rgb(255, 234, 234);
 }
 
 h3 {
@@ -22,8 +22,8 @@ h3 {
 }
 
 .nav_background {
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#ff9d9d));
-  background: linear-gradient(to bottom, transparent, #ff9d9d);
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#ffabab));
+  background: linear-gradient(to bottom, transparent, #ffafaf);
 }
 
 .container2 h4 {
