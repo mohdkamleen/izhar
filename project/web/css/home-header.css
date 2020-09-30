@@ -15,7 +15,14 @@
           box-shadow: var(--box-shadow);
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#888888));
   background: linear-gradient(to bottom, transparent, #888888);
-}
+  transition: 1s 2.3s ease;
+  transform: scale(.31);
+  transform-origin: right top;
+} 
+
+.nav_background.show{
+  transform: scale(1);
+} 
 
 .scroll_down {
   position: absolute;
@@ -91,7 +98,7 @@
   height: 90px;
   width: 110px;
   background: var(--radial-gradient);
-  z-index: -1;
+  z-index: -2;
   display: none;
   -webkit-transform: scale(0);
           transform: scale(0);

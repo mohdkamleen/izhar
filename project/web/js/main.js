@@ -1,21 +1,21 @@
 let preloader = document.querySelector("div.preloader"); 
 let preloader_counter = document.querySelector("div.preloader span b"); 
-let nav_hamberger_background = document.querySelector(".nav_hamburger_background"); 
+let nav_hamberger_background = document.querySelector(".nav_hamburger_background");  
+let nav_background = document.querySelector(".nav_background"); 
 let scroll_down = document.querySelector(" .scroll_down");  
-let style = document.getElementById("style");
-let oimg1 = document.getElementById("oimg1");
+let style = document.getElementById("style"); 
 let mousemove = document.getElementById("mousemove");
 
 window.onload = () => {
     preloader.classList.add("active"); 
+    nav_background.classList.add("show"); 
 }  
  
 
 window.onscroll = () => {
     let windowPageYOffset = window.pageYOffset;
     if(windowPageYOffset > 400){
-        nav_hamberger_background.classList.add("show");
-        oimg1.classList.add("show-image");
+        nav_hamberger_background.classList.add("show"); 
     } else {
         nav_hamberger_background.classList.remove("show");
     }
@@ -44,7 +44,7 @@ let preloader_counter_function = setInterval(function(){
 
 // window change color and background
 window.onclick = () => {
-   let arr = ["css/blue.css", "", "css/red.css", "css/green.css", "css/yellow.css", "", "css/gray.css", "css/pink.css", "", "css/cyan.css", "css/green2.css", "css/red.css", "css/red2.css" ]
+   let arr = ["css/blue.css", "", "css/red.css", "", "css/green.css", "", "css/yellow.css", "", "css/gray.css", "", "css/pink.css", "", "css/cyan.css", "", "css/green2.css", "", "css/red.css", "css/red2.css", "css/blue2.css" ]
     window.style.zIndex = -9999;
    let styleSheet = arr[Math.floor(Math.random() * arr.length)];
    style.setAttribute("href", styleSheet);
@@ -72,6 +72,23 @@ window.onmousemove  = () => {
           }
 
 
+// service worker 
+
+//////////// its service worker part ////////////
+
+if('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('../sw.js')
+    .then(res => {
+      console.info('Service Worker is Regitser', res);
+    })
+    .catch(err => {
+      console.info('Service Worker is not Register', err);
+    })
+  } else 
+    console.log('Service Worker is not suppoted in your browser');
+  
+  
+  
 
 
  

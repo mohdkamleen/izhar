@@ -9,6 +9,7 @@ print("""
 
 <head>
     <meta charset="UTF-8">
+    <script src="js/main.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstraph.css">
     <link rel="stylesheet" href="https://mohdkamleen.github.io/link/animate.css">
@@ -18,7 +19,22 @@ print("""
     <meta name="Description"
         content=" In this Website Im trained with digicoders and its makeing for my all Projet, Assignment and about me and my training company....... ">
     <title>Task 1 | html </title>
+    <style>
+    
+    #mousemove {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 20px;
+    width: 20px;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    z-index: -99999;
+    } 
 
+</style>
 </head>
 
 <body class="animate__animated animate__zoomIn">

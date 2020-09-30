@@ -18,7 +18,23 @@ print("""
 
     <link rel="stylesheet" href="css/bootstraph.css">
     <link rel="stylesheet" href="https://mohdkamleen.github.io/link/animate.css">
+    <script src="js/main.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+    
+#mousemove {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 20px;
+  width: 20px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  z-index: -99999;
+} 
+</style>
 </head>
 
 <body class="animate__animated animate__zoomIn">

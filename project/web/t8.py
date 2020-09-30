@@ -16,6 +16,7 @@ print("""
 
   <title>Task 8 | html </title>
   <link rel="stylesheet" href="css/bootstraph.css">
+    <script src="js/main.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
   <style>
@@ -26,6 +27,18 @@ print("""
         1px 1px 10px rgb(114, 116, 231);
 
     }
+#mousemove {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 20px;
+  width: 20px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  z-index: -99999;
+} 
 
     .form-group {
       border: 2px solid gray;

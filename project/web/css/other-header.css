@@ -71,13 +71,20 @@
   height: 90%;
   width: 90%;
   z-index: -1;
+  transform-origin: top right;
   -webkit-clip-path: circle(90vh at 80% -2vh);
           clip-path: circle(90vh at 80% -2vh);
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#888888));
   background: linear-gradient(to bottom, transparent, #888888);
-}
+  transition: 1s 2.3s ease;
+  transform: scale(.31);
+} 
+
+.nav_background.show{
+  transform: scale(1);
+} 
 
 .nav_hamburger_background {
   position: fixed;

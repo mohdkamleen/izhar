@@ -3,6 +3,8 @@ var appVersion = '1.0';
 var files = [
     './index.py',
     './project.py',
+    './other.py',
+    './contact.py',
     './a1.py',
     './a2.py',
     './a3.py',

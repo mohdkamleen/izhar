@@ -19,6 +19,7 @@ print("""
     <link rel="stylesheet" href="https://mohdkamleen.github.io/link/animate.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Task 4 | html</title>
+    <script src="js/main.js"></script>
 
     <style>
         .third {
@@ -30,6 +31,18 @@ print("""
             margin: 20px;
             padding: 10px;
         }
+#mousemove {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  height: 20px;
+  width: 20px;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  z-index: -99999;
+} 
 
         h3,
         p {
