@@ -1,10 +1,12 @@
-let preloader = document.querySelector("div.preloader"); 
+let main_div = document.getElementById("main_div"); 
+let preloader = document.querySelector("div.preloader");  
 let preloader_counter = document.querySelector("div.preloader span b"); 
 let nav_hamberger_background = document.querySelector(".nav_hamburger_background");  
 let nav_background = document.querySelector(".nav_background"); 
 let scroll_down = document.querySelector(" .scroll_down");  
 let style = document.getElementById("style"); 
 let mousemove = document.getElementById("mousemove");
+let down = document.getElementsByClassName("scroll_down")[0];
 
 window.onload = () => {
     preloader.classList.add("active"); 
@@ -13,20 +15,18 @@ window.onload = () => {
  
 
 window.onscroll = () => {
-    let windowPageYOffset = window.pageYOffset;
+    let windowPageYOffset = window.pageYOffset; 
+
     if(windowPageYOffset > 400){
         nav_hamberger_background.classList.add("show"); 
     } else {
         nav_hamberger_background.classList.remove("show");
-    }
+    } 
 
-    if(windowPageYOffset > 0){
-        scroll_down.style.transform = "translateY(-10px)";
-        scroll_down.style.opacity = "0"; 
-    } else {
-        scroll_down.style.transform = "translateY(10px)";
-        scroll_down.style.opacity = "1";
-    }
+    // scroll behaviour css html   
+    nav_background.style.top = -0.3 * windowPageYOffset + "px";
+    down.style.top = -0.5 * windowPageYOffset + "px";
+    main_div.style.top = -0.5 * windowPageYOffset + "px";
 }
  
 
@@ -39,7 +39,7 @@ let preloader_counter_function = setInterval(function(){
     if (count_number == 100){
         clearInterval(preloader_counter_function);
     }
-},12) 
+},13) 
 
 
 //////////////////// window change color and background////////////

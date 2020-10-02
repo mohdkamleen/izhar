@@ -17,15 +17,21 @@
   -webkit-clip-path: circle(90vh at 80% -2vh);
           clip-path: circle(90vh at 80% -2vh);
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#888888));
-  background: linear-gradient(to bottom, transparent, #888888);
-  transition: 1s 2.3s ease;
-  transform: scale(.31);
+  background: linear-gradient(to bottom, transparent, #888888); 
   transform-origin: right top;
+  transform: scale(.2);
+  transition: all .1s ease;
 } 
 
 .nav_background.show{
-  transform: scale(1);
+  animation: nav_back_animate 1s 2s ease forwards;
 } 
+
+@keyframes nav_back_animate{
+  to{ 
+    transform: scale(1);
+  }
+}
 
 button.btn {
   position: relative;

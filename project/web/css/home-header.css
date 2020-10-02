@@ -14,15 +14,21 @@
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
   background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#888888));
-  background: linear-gradient(to bottom, transparent, #888888);
-  transition: 1s 2.3s ease;
-  transform: scale(.31);
+  background: linear-gradient(to bottom, transparent, #888888); 
   transform-origin: right top;
+  transform: scale(.2);
+  transition: all .1s ease;
 } 
 
 .nav_background.show{
-  transform: scale(1);
+  animation: nav_back_animate 1s 2s ease forwards;
 } 
+
+@keyframes nav_back_animate{
+  to{ 
+    transform: scale(1);
+  }
+}
 
 .scroll_down {
   position: absolute;
@@ -36,7 +42,7 @@
   border: 2px solid #777777;
   cursor: pointer;
   -webkit-transition: .5s all linear;
-  transition: .5s all linear;
+  transition: .1s all linear;
   z-index: 1;
   -webkit-box-shadow: var(--box-shadow);
           box-shadow: var(--box-shadow);
@@ -277,5 +283,4 @@ img.nav_background_img {
     margin-right: 5rem;
     height: 250px;
   }
-}
-/*# sourceMappingURL=home-header.css.map */
+} 
