@@ -16,7 +16,7 @@ print("""
         content=" In this Website Im trained with digicoders and its makeing for my all Projet, Assignment and about me and my training company....... ">
 
     <title>Assignment First</title> 
-    <link rel="stylesheet" href="css/bootstraph.css">
+    <link rel="stylesheet" href="css/bootstraph.css"> 
     <link rel="stylesheet" href="https://mohdkamleen.github.io/link/animate.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 

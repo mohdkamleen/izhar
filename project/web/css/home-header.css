@@ -35,7 +35,7 @@
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  bottom: 5%;
+  bottom: 7%;
   height: 60px;
   width: 40px;
   border-radius: 40px;
@@ -102,7 +102,7 @@
   top: 5px;
   right: 5px;
   height: 90px;
-  width: 110px;
+  width: 100px;
   background: var(--radial-gradient);
   z-index: -2;
   display: none;
@@ -197,7 +197,7 @@
 
 img.nav_background_img {
   margin-right: 10rem;
-  height: 350px;
+  height: 350px; 
 }
 
 @media (max-width: 700px) {
@@ -219,10 +219,7 @@ img.nav_background_img {
   .header_text .text {
     width: 90%;
     overflow-x: hidden;
-  }
-  .header_text .text span {
-    font-size: 1.5rem;
-  }
+  } 
   .header_text .text h2 {
     font-size: 2rem;
   }

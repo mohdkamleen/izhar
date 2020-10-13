@@ -154,10 +154,10 @@ print("""
 				<span class="circle one"></span>
 				<span class="circle two"></span>
 
-				<form action="action/login.py" method="POST">
+				<form action="action/login.php" method="POST">
 					<h3 class="title">LogIn</h3>
                     <div class="input-container">
-						<input required type="email" name="email" class="input" id="email" />
+						<input required type="text" name="email" class="input" id="email" />
 						<label for="">Email</label>
 						<span>Email</span>
 					</div> 

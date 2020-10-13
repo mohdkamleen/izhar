@@ -15,6 +15,7 @@ print("""
         content=" In this Website Im trained with digicoders and its makeing for my all Projet, Assignment and about me and my training company....... ">
 
     <title>Assignment Four</title>
+    <link rel="shortcut icon" href="../media/image/logo.svg" type="image/x-icon">
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="css/bootstraph.css">
     <link rel="stylesheet" href="https://mohdkamleen.github.io/link/animate.css">

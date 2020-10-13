@@ -16,6 +16,7 @@ print("""
 
   <title>Task 8 | html </title>
   <link rel="stylesheet" href="css/bootstraph.css">
+    <link rel="shortcut icon" href="../media/image/logo.svg" type="image/x-icon">
     <script src="js/main.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 

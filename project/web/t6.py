@@ -18,6 +18,7 @@ print("""
     <link rel="stylesheet" href="css/bootstraph.css">
     <script src="js/main.js"></script>
     <link rel="stylesheet" href="https://mohdkamleen.github.io/link/animate.css">
+    <link rel="shortcut icon" href="../media/image/logo.svg" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <style>

@@ -4,7 +4,8 @@
   top: 0;
   left: 0;
   height: 100%;
-}
+  overflow-x: hidden;
+} 
 
 .nav_background {
   position: absolute;
@@ -37,7 +38,7 @@
   top: 5px;
   right: 5px;
   height: 90px;
-  width: 110px;
+  width: 100px;
   background: var(--radial-gradient);
   z-index: -2;
   display: none;
@@ -122,6 +123,7 @@ h3 span {
   border-top-right-radius: 0px !important;
   border-bottom-right-radius: 0px !important;
   border-radius: 10px;
+  background: transparent;
 }
 
 .comment input:focus {
@@ -175,6 +177,7 @@ button:hover {
           box-shadow: none;
   background: var(--radial-gradient);
 }
+ 
 
 @media (max-width: 700px) {
   .nav_hamburger_background {
@@ -230,5 +233,78 @@ button:hover {
     margin-right: 5rem;
     height: 250px;
   }
+} 
+
+
+/* show comment  */
+
+.comment_show{
+  position: relative;
+  height: 100%;
+  width: 100%; 
 }
-/*# sourceMappingURL=project.css.map */
+
+.comment_header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin:5px 5% ;
+  border-bottom: 1px solid var(--text-color);
+  padding: 10px;
+}
+
+.comment_header .right{
+  height: 40px;
+  width: 40px;
+  border: 2px solid var(--text-color);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: relative; 
+
+}
+
+.comment_header .right svg{
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  fill: var(--text-color);
+}
+
+.comment_body{ 
+  margin: 5px 10%; 
+  display: flex; 
+}
+
+.comment_logo{
+  height: 40px;
+  width: 40px;
+  border: 2px solid var(--text-color);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  position: relative;
+  margin-top: 10px;
+}
+
+.comment_logo svg{
+  position: absolute;
+  width: 60%;
+  height: 60%;
+  fill: var(--text-color);
+}
+
+.comment_box{ 
+  transform: translateX(20px); 
+  padding: 10px; 
+}
+ 
+.comment_box p{ 
+  word-break: break-all;
+}
+
+
+
+
+
+

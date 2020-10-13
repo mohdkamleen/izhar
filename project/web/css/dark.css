@@ -21,6 +21,14 @@
     -webkit-text-stroke: 0px;
     text-shadow: 2px 2px 2px #a0a0a0;
   }
+  nav .navbar ul li a:hover, nav .navbar ul li .active { 
+    border: 2px solid #7e7e85 !important; 
+    background: #646468 !important;
+  } 
+  .btn-group button.btn:hover { 
+    border: 2px solid #666965;
+    background: #666965;
+  }
   h3 {
     background: -webkit-gradient(linear, left top, left bottom, from(#a3a3a3), to(white));
     background: linear-gradient(#a3a3a3, white);
@@ -57,6 +65,7 @@
     -webkit-text-stroke: 1px rgba(235, 235, 235, 0.644) ; 
   }
   nav .navigation .logo span {  
-    -webkit-text-stroke: 1px rgba(91, 118, 236, 0.644) ; 
+    -webkit-text-stroke: 1px rgba(160, 160, 160, 0.644) ; 
+    color: #000000;
   }
 } 

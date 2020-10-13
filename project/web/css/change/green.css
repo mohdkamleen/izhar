@@ -8,6 +8,11 @@
                   4px 4px 10px rgba(149, 155, 148, 0.5);
 }
 
+::selection {
+  -webkit-text-stroke: 0px;
+  text-shadow: 2px 2px 2px #176628;
+}
+
 body {
   overflow-x: hidden;
   font-family: var(--font-family);

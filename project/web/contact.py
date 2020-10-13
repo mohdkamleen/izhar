@@ -155,7 +155,7 @@ print("""
 				<span class="circle one"></span>
 				<span class="circle two"></span>
 
-				<form action="action/contact.py" method="post">
+				<form action="action/contact.py" method="POST">
 					<h3 class="title">Contact us</h3>
 					<div class="input-container">
 						<input required type="text" name="name" class="input" />
@@ -178,6 +178,7 @@ print("""
 							<option value="want to say hi!!"></option>
 						</datalist>
 					</div>
+					<input type="hidden" name="date" id="comment_datetime">
 					<div class="input-container textarea">
 						<textarea required name="message" class="input"></textarea>
 						<label for="">Message</label>
@@ -196,17 +197,13 @@ print("""
 
 	</div>
 
-	<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
 
+	<script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script> 
 	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/nav.js"></script>
-	<script src="js/contact.js"></script>
-	<script src="js/jquery.fullpage.min.js"></script>
-	<script>
-		$('#main_page').fullpage(); 
-	</script>
-
+	<script src="js/contact.js"></script> 
+	<script src="js/time.js"></script> 
 </body>
 
 </html>

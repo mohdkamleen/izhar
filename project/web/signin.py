@@ -166,6 +166,7 @@ print("""
 						<label for="">Email</label>
 						<span>Email</span>
 					</div> 
+					<input type="hidden" name="date" id="comment_datetime">
 					<div class="input-container">
 						<input autocomplete="off" required type="password" name="password" class="input" />
 						<label for="">Password</label>
@@ -189,11 +190,8 @@ print("""
 	<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
 	<script src="js/main.js"></script>
 	<script src="js/nav.js"></script>
-	<script src="js/contact.js"></script>
-	<script src="js/jquery.fullpage.min.js"></script>
-	<script>
-		$('#main_page').fullpage(); 
-	</script>
+	<script src="js/time.js"></script>
+	<script src="js/contact.js"></script> 
 
 </body>
 

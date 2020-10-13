@@ -35,13 +35,13 @@ print("""
         href="https://digicoders.in/images/Logo/DigiCoders%20Technologies%20Logo%20Transparent.png">
     <title>Mohd Kamleen</title>
     <!-- title image favicon  -->
-    <link rel="shortcut icon" href="media/image/logo.svg" type="image/x-icon"> 
+    <link rel="shortcut icon" href="media/image/kamleen.png" type="image/x-icon"> 
     <!-- manually style sheet  -->
     <link rel="stylesheet" href="css/nav.css">
     <link rel="stylesheet" href="css/home-body.css">
     <link rel="stylesheet" href="css/home-header.css">
     <link rel="stylesheet" href="css/loader.css">
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css"> 
     <link rel="stylesheet" id="style">
     <!-- dark mode access style sheet  -->
     <link rel="stylesheet" href="css/dark.css">
@@ -76,7 +76,7 @@ print("""
                             <li><a href="other.py">Other</a></li>
                         </ul>
                     </div>
-                    <div class="hamburger"></div>
+                    <div class="hamburger"></div> 
                 </div>
                 <div class="menu_background1"></div>
                 <div class="menu_background2"></div>
@@ -122,7 +122,7 @@ print("""
                  <b>About me</b> <br>
                     My name is Mohd Kamleen. I'm 19years old. Currently, I am living in Ambedkar Nagar, India. I am
                     working as a student at CSJM GOVT POLY Ambedkar Nagar. And I am a student and weavers. And I learn
-                    programming language with digicoders. Click here to check my CV.
+                    programming language with digicoders.  
                 </h4>
 
                 <div class="img">

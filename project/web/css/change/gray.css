@@ -14,6 +14,16 @@ body {
   background: #c7c7c7;
 }
 
+nav .navbar ul li a:hover, nav .navbar ul li .active { 
+  border: 2px solid #7e7e85 !important; 
+  background: #646468 !important;
+}
+ 
+.btn-group button.btn:hover { 
+  border: 2px solid #666965;
+  background: #666965;
+}
+
 ::-moz-selection {
   -webkit-text-stroke: 0px;
   text-shadow: 2px 2px 2px #4b4b4b;

@@ -33,7 +33,7 @@ print("""
         href="https://digicoders.in/images/Logo/DigiCoders%20Technologies%20Logo%20Transparent.png">
     <title>Mohd Kamleen | Project</title>
     <!-- title image favicon  -->
-    <link rel="shortcut icon" href="https://digicoders.in/images/Logo/DigiCoders%20Technologies%20Logo%20Transparent.png" type="image/x-icon">
+    <link rel="shortcut icon" href="media/image/logo.svg" type="image/x-icon">
     <!-- manually style sheet  -->
     <link rel="stylesheet" href="css/project.css">
     <link rel="stylesheet" href="css/loader.css">
@@ -50,7 +50,7 @@ print("""
 <body> 
     <div id="main_div">
  
-        <div class="header">
+        <div class="header" >
 
             <!-- preloader  -->
              <div class="preloader">
@@ -158,26 +158,169 @@ task is available for python and it's framework and library.
 <span> Comment </span> <br>
 Thank you to everyone who responded to this web, I hope you liked my webpage if it's
 really then please added many suggestions for great commenting platform else dislike this or
-send feedback to mail.
+send feedback to mail. <br>  <br>
+The comments you are leaving are building your reputation. 
+Make it a good one that shows you are knowledgeable and 
+even-handed, instead of a disagreeable jerk with little to 
+add to the conversation.
+
                             <br><br>
-                            <div class="comment" id="cmt">
+                            <div class="comment">
                                 <form action="action/comment.py" method="POST">
-                                    <input type="text" required autocomplete="off" name="user_comment" placeholder="Type Your Comment">
+                                    <input type="text" required autocomplete="off" id="comment" name="user_comment" placeholder="Type Your Comment">
+                                    <input type="hidden" name="date" id="comment_datetime">
                                     <input type="submit" value="commit">
                                 </form>
                             </div>
                         </h3>
                     </div>
+ 
+                    
+
+
+                    <div class="comment_show">
+                        <div class="comment_header">
+""")
+
+
+import mysql.connector
+mydb=mysql.connector.connect(
+  host="localhost",
+  user="root",
+  password="",
+  database="kamleen"
+)
+mycursor=mydb.cursor()
+
+sel="select * from comments"
+mycursor.execute(sel)
+data=mycursor.fetchall() 
+    
+print("""
+    <div class="left"><h3><p>%scomment's</p></h3></div>
+"""%len(data))
+
+print("""
+                            <div class="right">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 477.867 477.867" style="enable-background:new 0 0 477.867 477.867;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M426.667,0.002H51.2C22.923,0.002,0,22.925,0,51.202v273.067c0,28.277,22.923,51.2,51.2,51.2h60.587l-9.284,83.456
+			c-1.035,9.369,5.721,17.802,15.09,18.837c4.838,0.534,9.674-1.023,13.292-4.279l108.919-98.014h186.863
+			c28.277,0,51.2-22.923,51.2-51.2V51.202C477.867,22.925,454.944,0.002,426.667,0.002z M443.733,324.269
+			c0,9.426-7.641,17.067-17.067,17.067H233.25c-4.217,0.001-8.284,1.564-11.418,4.386l-80.452,72.414l6.434-57.839
+			c1.046-9.367-5.699-17.809-15.067-18.856c-0.63-0.07-1.263-0.106-1.897-0.105H51.2c-9.426,0-17.067-7.641-17.067-17.067V51.202
+			c0-9.426,7.641-17.067,17.067-17.067h375.467c9.426,0,17.067,7.641,17.067,17.067V324.269z"/>
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+
+                            </div>
+                        </div> 
+""")
+for x in data: 
+    print("""
+                        <div class="comment_body">
+                            <div class="comment_logo">
+                                <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<g>
+	<g>
+         <path d="M437.02,330.98c-27.883-27.882-61.071-48.523-97.281-61.018C378.521,243.251,404,198.548,404,148
+			C404,66.393,337.607,0,256,0S108,66.393,108,148c0,50.548,25.479,95.251,64.262,121.962
+			c-36.21,12.495-69.398,33.136-97.281,61.018C26.629,379.333,0,443.62,0,512h40c0-119.103,96.897-216,216-216s216,96.897,216,216
+			h40C512,443.62,485.371,379.333,437.02,330.98z M256,256c-59.551,0-108-48.448-108-108S196.449,40,256,40
+			c59.551,0,108,48.448,108,108S315.551,256,256,256z"/> 	
+	</g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
+
+                            </div>
+                            <div class="comment_box"> 
+                                    <p>%s <i style="color: var(--text-color);">%s</i></p> 
+                                    <p>%s</p>
+                                    <br>
+                                    <p><b><a href="#comment"> reply </a></b></p>
+                            </div>
+                        </div>
+"""%(x[3],x[0],x[2])) 
+ 
+ 
+print("""
+                    </div>
+                     <div id="cmt"></div>
                 </section>
             </header>
-        </div>
-
+ 
+    </div>
     </div>
 
 
         <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
         <script src="js/main.js"></script>
         <script src="js/nav.js"></script> 
+        <script src="js/time.js"></script> 
 </body>
 
 </html>
